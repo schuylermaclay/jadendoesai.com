@@ -6,21 +6,6 @@
 <title>Where Warren Does Its Business — A History of Public Space in a Small Vermont Town</title>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
-<script>
-// Detect file:// and show banner; also fix image loading via JS fetch+blob on http://
-window.addEventListener('DOMContentLoaded', function() {
-  if (window.location.protocol === 'file:') {
-    var banner = document.getElementById('file-protocol-banner');
-    if (banner) banner.style.display = 'flex';
-    // Also try to load images via JS fetch — may work in some browsers with relaxed settings
-    // but mainly this just shows the banner
-  } else {
-    // Served via http:// — images should load normally, hide banner
-    var banner = document.getElementById('file-protocol-banner');
-    if (banner) banner.style.display = 'none';
-  }
-});
-</script>
 <style>
 :root {
   --ink: #111108;
@@ -596,27 +581,6 @@ footer strong { color: rgba(244,240,230,.85); }
 </style>
 </head>
 <body>
-<div id="file-banner" style="display:none;background:#c0392b;color:#fff;padding:.75rem 1.2rem;font-family:'Libre Franklin',sans-serif;font-size:.88rem;text-align:center;position:sticky;top:0;z-index:9999">
-  ⚠️ <strong>Photos won't load when opened directly in Chrome.</strong>
-  Run <code style="background:rgba(255,255,255,.2);padding:.1em .4em;border-radius:3px">python3 serve.py</code> (included) to view with images, or run <code style="background:rgba(255,255,255,.2);padding:.1em .4em;border-radius:3px">python3 download_images.py</code> to save them locally.
-  <button onclick="document.getElementById('file-banner').style.display='none'" style="margin-left:1rem;background:rgba(255,255,255,.25);border:none;color:#fff;padding:.2rem .6rem;border-radius:3px;cursor:pointer">✕ Dismiss</button>
-</div>
-<script>
-  if (location.protocol === 'file:') {
-    document.getElementById('file-banner').style.display = 'block';
-  }
-</script>
-
-
-<!-- Chrome file:// protocol warning banner -->
-<div id="file-protocol-banner" style="display:none;position:sticky;top:0;z-index:999;background:#7d3012;color:#fff;padding:.7rem 1.2rem;font-family:'Libre Franklin',sans-serif;font-size:.85rem;align-items:center;gap:1rem;flex-wrap:wrap;line-height:1.5">
-  <span>📷 <strong>Photos not showing?</strong> Chrome blocks local images for security. Fix in 30 seconds:</span>
-  <span style="background:rgba(255,255,255,.15);padding:.25rem .8rem;border-radius:3px;font-family:monospace;font-size:.82rem">Step 1: python3 download_images.py</span>
-  <span style="background:rgba(255,255,255,.15);padding:.25rem .8rem;border-radius:3px;font-family:monospace;font-size:.82rem">Step 2: python3 serve.py</span>
-  <span>then open <strong>localhost:8765</strong> in Chrome. Both scripts are in the same folder as this file.</span>
-  <button onclick="this.parentElement.style.display='none'" style="margin-left:auto;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:.2rem .6rem;border-radius:3px;cursor:pointer;font-size:.8rem">✕</button>
-</div>
-
 
 <div class="header-rule"></div>
 <div class="header-rule-thin"></div>
@@ -783,14 +747,14 @@ footer strong { color: rgba(244,240,230,.85); }
 <!-- Sense-of-place photo: covered bridge and Main Street -->
 <div class="photo-row two-up" style="margin:1rem 0 1.5rem">
   <figure class="photo-fig">
-    <img src="images/warren_covered_bridge.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg"
       alt="Warren Village Covered Bridge"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
     <div class="photo-placeholder" style="display:none">📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small></div>
     <figcaption class="photo-cap"><strong>Warren Village Covered Bridge</strong> — The covered bridge over the Mad River has been a landmark of the village center since the 19th century. Route 100 crosses the river here, just west of Main Street. Photo: Wikimedia Commons.</figcaption>
   </figure>
   <figure class="photo-fig">
-    <img src="images/warren_main_street_north.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
       alt="Main Street, Warren VT, looking north"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
     <div class="photo-placeholder" style="display:none">📷 Main Street Looking North<br><small>Warren VT · Wikimedia Commons</small></div>
@@ -826,35 +790,14 @@ footer strong { color: rgba(244,240,230,.85); }
     <div class="tl-dot era-early"></div>
     <div class="tl-year">1812 — c. 1830</div>
     <div class="tl-title">Red School House, East Warren</div>
-    <div class="tl-body">For eighteen years, Freeman's Meetings move to the Red School House, located in East Warren — then still the commercial heart of the town. The Red School House stood near the Four Corners at Roxbury Mountain Road, where the first district schoolhouse had been built "before 1805." East Warren had the best farmland and larger farms; it remained the center of business from settlement until the 1820s. As mills and dams multiplied along the Mad River, the population shifted westward toward the Village, and the Red School House era came to an end. The building itself is not known to survive. <em>Today the East Warren Community Market occupies a building near the old Four Corners crossroads.</em></div>
-  </div>
-
-  <!-- Photo: East Warren farming era + note about Red School House -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:500px">
-    <figure class="photo-fig">
-      <img src="images/warren_sibley_house_1967.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sibley_House_1967.jpg/600px-Sibley_House_1967.jpg"
-        alt="Sibley House, East Warren, 1967 — typical of the farmhouses where early town meetings were held"
-        style="height:220px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:220px">📷 Sibley House, East Warren, 1967<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Sibley House, East Warren, 1967</strong> — A farmstead typical of the East Warren that hosted Warren's earliest civic life. The Red School House stood in this same neighborhood, near the Roxbury Mountain Road crossroads. East Warren was the town's center until the 1820s, when the mill economy shifted gravity toward Warren Village. Photo: Wikimedia Commons.</figcaption>
-    </figure>
+    <div class="tl-body">For eighteen years, town meetings move to the Red School House in East Warren. This coincides with the period when East Warren remained the commercial and civic center. Meanwhile, settlement along the Mad River is accelerating: dams and mills appear, the Mad River Turnpike (now Rt. 100) is surveyed in 1807, and the population shifts westward toward the Village.</div>
   </div>
 
   <div class="tl-entry">
     <div class="tl-dot era-early"></div>
     <div class="tl-year">1823 (organized) / 1829 (built)</div>
     <div class="tl-title">Village School House (Brick) — South Side of the Common</div>
-    <div class="tl-body">The Village School is organized in 1823 and built in brick in 1829 on the south side of the Village Common — a location chosen deliberately, at the symbolic center of the new village plan (the Common and cemetery were laid out just three years earlier, in 1826). After 1840, Freeman's Meetings shift entirely to the Village, and the brick schoolhouse carries dual duty as both school and town hall for more than three decades. <em>Around 1867, the original brick building was demolished and replaced on the same site by the frame structure that still stands today — now the Municipal Building at 42 Cemetery Road.</em> This replacement-in-place explains why the same parcel served Warren continuously from 1829 to the present, and why the current building is described in historic records as "the frame building still extant" succeeding the brick original.</div>
-  </div>
-
-  <!-- Building lineage note for the Brick Schoolhouse -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:500px;background:var(--pale);border-left:3px solid var(--forest);padding:.8rem 1rem;font-family:'Libre Franklin',sans-serif;font-size:.84rem;border-radius:0 4px 4px 0">
-    <div style="font-weight:700;color:var(--forest);margin-bottom:.35rem;font-size:.88rem">📐 The Brick Schoolhouse → Municipal Building Lineage</div>
-    <div style="color:var(--ink);line-height:1.5">
-      The original <strong>1829 brick schoolhouse</strong> was Warren's civic center for four decades. Around <strong>1867</strong>, the brick was replaced by a wood-frame building on the same 42 Cemetery Road site. That frame building was <strong>remodeled in 1952</strong> (third room added, well drilled, heating plant) and is the structure that stands today as the <strong>Municipal Building</strong> — housing the Town Clerk, Town Administrator, and Board of Listers. The library occupied it 1974–2009, making the Municipal Building the direct successor to the Brick Schoolhouse as Warren's primary civic facility for more than 180 years.
-    </div>
+    <div class="tl-body">The Village School is organized in 1823 and built in brick in 1829 on the south side of the Village Common. Its construction marks the formal establishment of the village as the center of civic life. After 1840, Freeman's Meetings shift entirely to the Village. The brick schoolhouse hosts both education and government for the next several decades — a dual use that would become a recurring pattern in Warren's civic history.</div>
   </div>
 
   <div class="tl-entry">
@@ -864,37 +807,11 @@ footer strong { color: rgba(244,240,230,.85); }
     <div class="tl-body">The church/meetinghouse is built by the Free Will Baptists, Universalists, Congregationalists, and Methodists jointly. Large public assemblies increasingly have a dedicated civic-religious space, reducing the schoolhouse's role as the primary gathering point. For decades, church ladies serve meals at the noon recess of Town Meeting.</div>
   </div>
 
-  <!-- Photo: the 1838 church -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:420px">
-    <figure class="photo-fig">
-      <img src="images/warren_church.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
-        alt="Warren Church, 1838 meetinghouse, Warren Vermont"
-        style="height:200px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Church (1838–39)<br><small>Wikimedia Commons · CC BY-SA</small></div>
-      <figcaption class="photo-cap"><strong>Warren Church / Meetinghouse, 1838–39</strong> — Built jointly by four denominations. For decades the town's primary gathering space for civic and religious life alike. The 1872 Town Hall stands adjacent. Photo: Wikimedia Commons.</figcaption>
-    </figure>
-  </div>
-
   <div class="tl-entry">
     <div class="tl-dot era-mid"></div>
     <div class="tl-year">c. 1840 — 1872</div>
     <div class="tl-title">Brick Schoolhouse — All Town Meetings Held Here</div>
-    <div class="tl-body">After 1840, Warren holds all Freeman's Meetings in the Village, first at the brick schoolhouse, then — after the ~1867 rebuild — at the new frame building. The mill economy is near its peak (by 1870 there are as many as nine mills along the Mad River), and by the late 1860s the schoolhouse, however recently rebuilt, is still straining under dual educational and civic demands. By 1872 it is clear a dedicated town hall is needed.</div>
-  </div>
-
-  <!-- Photo: Mad River / covered bridge - the setting of this mill economy era -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:520px">
-    <figure class="photo-fig">
-      <img src="images/warren_covered_bridge.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
-        alt="Warren Village Covered Bridge over the Mad River"
-        style="height:200px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Warren Village Covered Bridge</strong> — The Mad River powered up to nine mills in the 1870s, making Warren's mill economy the most developed in the valley. The covered bridge spans the river at the heart of the village. Photo: Wikimedia Commons.</figcaption>
-    </figure>
+    <div class="tl-body">After 1840, Warren holds all Freeman's Meetings in the Village, at the Brick Schoolhouse. By the 1850s–1860s, the town's population has grown significantly, the mill economy is near its peak (by 1870 there are as many as nine mills along the Mad River), and the schoolhouse is straining under the weight of both educational and civic demands. By the late 1860s, it is clear a dedicated town hall is needed.</div>
   </div>
 
   <div class="tl-entry">
@@ -907,14 +824,14 @@ footer strong { color: rgba(244,240,230,.85); }
   <!-- Photo pullout: Church and Town Hall -->
   <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:540px">
     <figure class="photo-fig short">
-      <img src="images/warren_church.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg"
         alt="Warren Church, the 1838 meetinghouse"
         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
       <div class="photo-placeholder" style="display:none;height:160px">📷 Warren Church<br><small>Wikimedia Commons</small></div>
       <figcaption class="photo-cap"><strong>The 1838 Meetinghouse</strong> — civic and religious center before the Town Hall. The Town Hall (1872) stands adjacent to the same site.</figcaption>
     </figure>
     <figure class="photo-fig short">
-      <img src="images/warren_town_hall_2008.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/2008_library_Warren_Vermont_2611591841.jpg"
         alt="Warren Town Hall, 2008"
         onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
       <div class="photo-placeholder" style="display:none;height:160px">📷 Town Hall · 2008<br><small>Wikimedia Commons</small></div>
@@ -924,28 +841,6 @@ footer strong { color: rgba(244,240,230,.85); }
 
   <div class="tl-entry">
     <div class="tl-dot era-mid"></div>
-
-  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
-        <figure class="photo-fig">
-      <img src="images/warren_covered_bridge.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
-        alt="Warren Village Covered Bridge"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small></div>
-    </figure>
-        <figure class="photo-fig">
-      <img src="images/warren_bridge_2.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/WarrenBridge.JPG/800px-WarrenBridge.JPG"
-        alt="Warren Covered Bridge, alternate view"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Covered Bridge, alternate view<br><small>Wikimedia Commons</small></div>
-    </figure>
-  </div>
-  <p style="font-size:.8rem;color:#888;font-style:italic;margin:-.8rem 0 1rem 2rem;font-family:'Libre Franklin',sans-serif">
-    The Warren Village Covered Bridge over the Mad River — washed out in the catastrophic 1927 flood and later restored with a Vermont Legislature grant. Truck traffic is prohibited to preserve it. Photos: Wikimedia Commons.
-  </p>
     <div class="tl-year">1900</div>
     <div class="tl-title">Warren Public Library — Founded by Town Meeting Vote</div>
     <div class="tl-body">The library is established by a vote of Town Meeting, beginning a formal collection. Its early decades are spent in various arrangements — the record notes that when it eventually moved to the Municipal Building in 1974, it had grown to 1,000 catalogued books. The specific location of the library in its earliest decades (1900–1974) is not clearly documented in available sources; the 1974 move to the Municipal Building is the first clearly recorded permanent home.</div>
@@ -956,27 +851,6 @@ footer strong { color: rgba(244,240,230,.85); }
     <div class="tl-year">1947</div>
     <div class="tl-title">Warren Volunteer Fire Department — North End of Village</div>
     <div class="tl-body">The volunteer fire department is organized under the leadership of Clayton Neill, its first chief, in 1947. Its first quarters are at the north end of the Village. The present fire station — built into the bank at the entrance of the Common — comes later; an addition was dedicated October 23, 1977, in honor of John Snow, who served as fire chief for twenty-two years.</div>
-  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
-        <figure class="photo-fig">
-      <img src="images/warren_main_street_north.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
-        alt="Main Street, Warren Village, looking north"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Main Street, Warren Village, looking north<br><small>Wikimedia Commons</small></div>
-    </figure>
-        <figure class="photo-fig">
-      <img src="images/warren_bridge_2.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/WarrenBridge.JPG/800px-WarrenBridge.JPG"
-        alt="Warren Covered Bridge, alternate view"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Covered Bridge, alternate view<br><small>Wikimedia Commons</small></div>
-    </figure>
-  </div>
-  <p style="font-size:.8rem;color:#888;font-style:italic;margin:-.8rem 0 1rem 2rem;font-family:'Libre Franklin',sans-serif">
-    <strong style="color:#aaa">Left:</strong> Main Street looking north through Warren Village — fire station at the entrance to the Common, Town Hall on Main Street. <strong style="color:#aaa">Right:</strong> The Warren Covered Bridge, which the volunteer fire department helped protect after the 1927 flood restoration. Photos: Wikimedia Commons.
-  </p>
   </div>
 
   <div class="tl-entry">
@@ -986,19 +860,6 @@ footer strong { color: rgba(244,240,230,.85); }
     <div class="tl-body">The original brick Village Schoolhouse (built 1829, rebuilt in frame c. 1867) is significantly remodeled: a third room is added, a well is drilled, and a heating plant is installed. By 1960, it is the only school still operating in Warren. The growth of the recreation industry soon renders even this school too small, prompting the construction of Warren Elementary School on the Brooks Field Recreation Area. The old school building transitions to administrative uses.</div>
   </div>
 
-  <!-- Photo: Hickox House illustrates the Historic District village context in which the schoolhouse sat -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:460px">
-    <figure class="photo-fig">
-      <img src="images/warren_hickox_house.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Warren_Hickox_House.JPG/800px-Warren_Hickox_House.JPG"
-        alt="Warren Hickox House, Warren Village Historic District"
-        style="height:200px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Hickox House<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Warren Hickox House, Warren Village Historic District</strong> — One of the historic structures within the same NRHP-listed district as the Municipal Building (the former schoolhouse) and the Town Hall. The 1952 remodel of the schoolhouse took place within this intact 19th-century village fabric. Photo: Wikimedia Commons.</figcaption>
-    </figure>
-  </div>
-
   <div class="tl-entry">
     <div class="tl-dot era-mod"></div>
     <div class="tl-year">1974</div>
@@ -1006,58 +867,11 @@ footer strong { color: rgba(244,240,230,.85); }
     <div class="tl-body">"The Village School was turned into offices for public officials and space for the library which had been started in 1900. The move to the Municipal Building (formerly the Village School House) took place in 1974." With 1,000 books catalogued by librarian Lois Kaufmann and volunteers, the library finds its first formal permanent home inside what is now called the Municipal Building — the same building that houses the Town Clerk and other offices to this day. This is the first time the library and town offices explicitly share a building.</div>
   </div>
 
-  <!-- Photo: Main Street looking north — the civic campus in context -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:480px">
-    <figure class="photo-fig">
-      <img src="images/warren_main_street_north.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
-        alt="Main Street, looking north, Warren VT"
-        style="height:190px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:190px">📷 Main Street, Warren VT<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Main Street, Warren Village, looking north</strong> — The Town Hall (built 1872) is on Main Street; Cemetery Road branches toward the Municipal Building (the 1829/1867 schoolhouse), where the library lived 1974–2009. Photo: Wikimedia Commons.</figcaption>
-    </figure>
-  </div>
-
   <div class="tl-entry">
     <div class="tl-dot era-mod"></div>
     <div class="tl-year">2007</div>
     <div class="tl-title">Town Meeting Votes $200K for Town Hall Renovation — and a New Library</div>
     <div class="tl-body">Voters approve a $200,000 renovation of the Town Hall at 413 Main Street and simultaneously approve a community planning process to identify a site for a standalone permanent library building. The intent is explicitly for the library to eventually have its own facility. The Town Hall renovation proceeds.</div>
-  </div>
-  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
-        <figure class="photo-fig">
-      <img src="images/warren_hickox_house.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Warren_Hickox_House.JPG/800px-Warren_Hickox_House.JPG"
-        alt="Warren Hickox House, Warren Village Historic District (NRHP)"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Hickox House, Warren Village Historic District (NRHP)<br><small>Wikimedia Commons</small></div>
-    </figure>
-        <figure class="photo-fig">
-      <img src="images/warren_church.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
-        alt="Warren Church, 1838 meetinghouse"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Church, 1838 meetinghouse<br><small>Wikimedia Commons</small></div>
-    </figure>
-  </div>
-  <p style="font-size:.8rem;color:#888;font-style:italic;margin:-.8rem 0 1rem 2rem;font-family:'Libre Franklin',sans-serif">
-    Both civic buildings sit within the Warren Village Historic District (NRHP, 1992, amended 2011). <strong style="color:#aaa">Left:</strong> The Hickox House, a Greek Revival structure in the district. <strong style="color:#aaa">Right:</strong> The 1838 meetinghouse, adjacent to the 1872 Town Hall. Photos: Wikimedia Commons.
-  </p>
-
-  <!-- Photo: Town Hall exterior — as renovated, just before library moved in -->
-  <div style="margin:.6rem 0 1.2rem 2rem;max-width:480px">
-    <figure class="photo-fig">
-      <img src="images/warren_town_hall_2008.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
-        alt="Warren Town Hall, 413 Main Street, 2008"
-        style="height:200px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Town Hall, 2008<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Warren Town Hall, 413 Main Street, 2008</strong> — Photographed after the $200K renovation, the year before the library moved in. Built 1872; renovated 2007–2009. The building now holds the library permanently. Photo: Wikimedia Commons.</figcaption>
-    </figure>
   </div>
 
   <div class="tl-entry">
@@ -1067,25 +881,15 @@ footer strong { color: rgba(244,240,230,.85); }
     <div class="tl-body">Following the Town Hall renovation, the library relocates from the Municipal Building to the renovated Town Hall. Vermont woodworkers build all shelving. The community moves the collection in a "bucket brigade." The historic stage is preserved as the children's area. The move is explicitly described as temporary. The permanent building is never constructed — the 2008 financial crisis is among the factors that halt planning — and the library remains in the Town Hall to the present.</div>
   </div>
 
-  <!-- 2009: Town Hall exterior + Library interior -->
-  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
+  <!-- Library interior photo -->
+  <div style="margin:.8rem 0 1.4rem 2rem;max-width:400px">
     <figure class="photo-fig">
-      <img src="images/warren_town_hall_2008.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
-        alt="Warren Town Hall exterior, 2008 — the year before the library moved in"
-        style="height:200px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:200px">📷 Town Hall exterior, 2008<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Town Hall, 413 Main St, 2008</strong> — photographed the year before the library moved in. Photo: Wikimedia Commons.</figcaption>
-    </figure>
-    <figure class="photo-fig">
-      <img src="images/warren_library_interior_2018.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Second_floor_of_Warren_Public_Library%2C_August_2018.JPG/800px-Second_floor_of_Warren_Public_Library%2C_August_2018.JPG"
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Second_floor_of_Warren_Public_Library%2C_August_2018.JPG"
         alt="Second floor of Warren Public Library, August 2018"
-        style="height:200px"
-        loading="lazy"
-        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
-      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Library interior, 2018<br><small>Wikimedia Commons</small></div>
-      <figcaption class="photo-cap"><strong>Library interior, second floor, 2018</strong> — nine years into its "temporary" home. Hand-built Vermont woodworker shelving visible. Photo: Wikimedia Commons.</figcaption>
+        style="height:240px"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="photo-placeholder" style="display:none;height:240px">📷 Warren Library interior, 2018<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Warren Public Library, second floor, 2018</strong> — The library nine years into its "temporary" home. The hand-built Vermont woodworker shelving is visible. Photo: Wikimedia Commons.</figcaption>
     </figure>
   </div>
 
@@ -1203,7 +1007,7 @@ footer strong { color: rgba(244,240,230,.85); }
 <div class="photo-row two-up">
   <figure class="photo-fig">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
+      src="https://upload.wikimedia.org/wikipedia/commons/0/04/2008_library_Warren_Vermont_2611591841.jpg"
       alt="Warren Public Library (in Town Hall), Warren Vermont, 2008"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
     />
@@ -1214,7 +1018,7 @@ footer strong { color: rgba(244,240,230,.85); }
   </figure>
   <figure class="photo-fig">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
+      src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
       alt="Main Street, Looking North, Warren VT"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
     />
@@ -1228,7 +1032,7 @@ footer strong { color: rgba(244,240,230,.85); }
 <div class="photo-row three-up">
   <figure class="photo-fig short">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
+      src="https://upload.wikimedia.org/wikipedia/commons/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg"
       alt="Warren Church (the 1838 meetinghouse)"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
     />
@@ -1239,7 +1043,7 @@ footer strong { color: rgba(244,240,230,.85); }
   </figure>
   <figure class="photo-fig short">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
+      src="https://upload.wikimedia.org/wikipedia/commons/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg"
       alt="Warren Village Covered Bridge over the Mad River"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
     />
@@ -1250,7 +1054,7 @@ footer strong { color: rgba(244,240,230,.85); }
   </figure>
   <figure class="photo-fig short">
     <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Second_floor_of_Warren_Public_Library%2C_August_2018.JPG/800px-Second_floor_of_Warren_Public_Library%2C_August_2018.JPG"
+      src="https://upload.wikimedia.org/wikipedia/commons/7/79/Second_floor_of_Warren_Public_Library%2C_August_2018.JPG"
       alt="Second floor of Warren Public Library, 2018"
       onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
     />
@@ -1261,36 +1065,6 @@ footer strong { color: rgba(244,240,230,.85); }
   </figure>
 </div>
 
-
-<div class="photo-row three-up" style="margin:1.5rem 0">
-    <figure class="photo-fig">
-      <img src="images/warren_sibley_house_1967.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sibley_House_1967.jpg/600px-Sibley_House_1967.jpg"
-        alt="Sibley House, East Warren, 1967"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Sibley House, East Warren, 1967<br><small>Wikimedia Commons</small></div>
-    </figure>
-    <figure class="photo-fig">
-      <img src="images/warren_bridge_2.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/WarrenBridge.JPG/800px-WarrenBridge.JPG"
-        alt="Warren Covered Bridge, alternate view"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Covered Bridge, alternate view<br><small>Wikimedia Commons</small></div>
-    </figure>
-    <figure class="photo-fig">
-      <img src="images/warren_hickox_house.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Warren_Hickox_House.JPG/800px-Warren_Hickox_House.JPG"
-        alt="Warren Hickox House (NRHP)"
-        style="height:185px"
-        loading="lazy"
-        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
-      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Hickox House (NRHP)<br><small>Wikimedia Commons</small></div>
-    </figure>
-</div>
-<p style="font-size:.78rem;color:#888;font-style:italic;margin:-.5rem 0 1.5rem;font-family:'Libre Franklin',sans-serif;text-align:center">
-  More Warren Village: Sibley House (East Warren, photographed 1967) · Covered Bridge from upstream · Hickox House (NRHP contributing structure, Greek Revival). Photos: Wikimedia Commons.
-</p>
 </section>
 ══════════════════════════════════════════ -->
 <section id="context">
@@ -1559,31 +1333,6 @@ new Chart(ctx3, {
       }
     }
   }
-});
-</script>
-
-<script>
-// If local images/ folder not found, fall back to Wikimedia URLs
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('img[data-wiki]').forEach(function(img) {
-    img.addEventListener('error', function() {
-      if (this.src !== this.dataset.wiki) {
-        this.src = this.dataset.wiki;
-      } else {
-        // Both local and wiki failed — show placeholder
-        this.style.display = 'none';
-        var ph = this.nextElementSibling;
-        if (ph && ph.classList.contains('photo-placeholder')) {
-          ph.style.display = 'flex';
-        }
-        var closest = this.closest('figure');
-        if (closest) {
-          var ph2 = closest.querySelector('.photo-placeholder');
-          if (ph2) ph2.style.display = 'flex';
-        }
-      }
-    });
-  });
 });
 </script>
 </body>
