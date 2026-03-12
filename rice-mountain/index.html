@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'><rect width='1' height='1' fill='%23999'/></svg>">
+<title>The Land Beneath Your Feet — 330 Rice Mountain Road, Warren, Vermont</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:        #1a1410;
+    --brown:      #6b4c2a;
+    --gold:       #b8922a;
+    --cream:      #f7f3ec;
+    --warm-white: #faf8f3;
+    --rule:       #c9b99a;
+    --caption:    #5c4a35;
+    --faint:      #e8e0d2;
+    --red-accent: #8b3a2a;
+    --page-max:   780px;
+  }
+
+  html { font-size: 17px; background: #d6ccc0; }
+
+  body {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-weight: 300;
+    color: var(--ink);
+    background: #d6ccc0;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    background: var(--ink);
+    color: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cover::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 59px, rgba(200,180,140,0.06) 59px, rgba(200,180,140,0.06) 60px),
+      repeating-linear-gradient(90deg, transparent, transparent 59px, rgba(200,180,140,0.06) 59px, rgba(200,180,140,0.06) 60px);
+  }
+  .cover-rule { width: 120px; height: 2px; background: var(--gold); margin: 1.5rem auto; }
+  .cover-subtitle {
+    font-family: 'Crimson Pro', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #c9b99a;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+  }
+  .cover h1 {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    line-height: 1.18;
+    color: var(--cream);
+    max-width: 680px;
+    font-weight: 400;
+  }
+  .cover-meta {
+    margin-top: 2.5rem;
+    font-size: 0.88rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #a09070;
+    line-height: 2;
+  }
+  .cover-border {
+    position: absolute;
+    inset: 28px;
+    border: 1px solid rgba(200,180,140,0.18);
+    pointer-events: none;
+  }
+  .cover-corner {
+    position: absolute;
+    width: 24px; height: 24px;
+    border-color: var(--gold);
+    border-style: solid;
+    opacity: 0.7;
+  }
+  .cover-corner.tl { top: 28px; left: 28px; border-width: 2px 0 0 2px; }
+  .cover-corner.tr { top: 28px; right: 28px; border-width: 2px 2px 0 0; }
+  .cover-corner.bl { bottom: 28px; left: 28px; border-width: 0 0 2px 2px; }
+  .cover-corner.br { bottom: 28px; right: 28px; border-width: 0 2px 2px 0; }
+
+  .cover-parcel-badge {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.4rem 1.2rem;
+    border: 1px solid rgba(200,180,140,0.35);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #a09070;
+  }
+
+  /* ── PAGE WRAPPER ── */
+  .page {
+    background: var(--warm-white);
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 4rem 4rem 5rem;
+    box-shadow: 0 0 60px rgba(0,0,0,0.25);
+    position: relative;
+  }
+  @media (max-width: 640px) {
+    .page { padding: 2.5rem 1.8rem 4rem; }
+  }
+
+  /* ── RUNNING HEAD ── */
+  .running-head {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--caption);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 0.6rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  /* ── CHAPTER / SECTION HEADS ── */
+  .chapter-number {
+    font-family: 'IM Fell English', serif;
+    font-size: 0.78rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    font-family: 'IM Fell English', Georgia, serif;
+    font-size: 1.85rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+  h3 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--brown);
+    margin: 2rem 0 0.8rem;
+  }
+  .section-rule {
+    width: 48px; height: 2px;
+    background: var(--gold);
+    margin: 0.6rem 0 1.6rem;
+  }
+
+  /* ── BODY TEXT ── */
+  p {
+    font-size: 1.03rem;
+    line-height: 1.78;
+    margin-bottom: 1rem;
+    text-align: justify;
+    hyphens: auto;
+  }
+  p + p { text-indent: 1.5em; }
+  p + p.no-indent { text-indent: 0; }
+
+  /* ── SECTION DIVIDERS ── */
+  .section-break {
+    margin: 3.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--rule);
+  }
+  .section-break::before, .section-break::after {
+    content: ''; flex: 1;
+    height: 1px; background: var(--rule);
+  }
+  .section-break span {
+    font-family: 'IM Fell English', serif;
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+  }
+
+  /* ── DROP CAP ── */
+  .dropcap::first-letter {
+    font-family: 'IM Fell English', serif;
+    font-size: 4.2rem;
+    float: left;
+    line-height: 0.78;
+    margin: 0.08em 0.1em 0 0;
+    color: var(--brown);
+  }
+
+  /* ── FIGURES ── */
+  figure {
+    margin: 2rem 0 2.5rem;
+    border: 1px solid var(--faint);
+    background: #f2ede4;
+    padding: 0;
+    overflow: hidden;
+  }
+  figure img {
+    width: 100%;
+    display: block;
+    max-height: 420px;
+    object-fit: cover;
+    object-position: center;
+    filter: sepia(12%) contrast(1.04);
+  }
+  figcaption {
+    padding: 0.7rem 1rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--caption);
+    font-style: italic;
+    border-top: 1px solid var(--faint);
+    background: #ede8de;
+  }
+  figcaption strong {
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brown);
+    font-size: 0.78rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* ── MAP GRID ── */
+  .map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem 0 2.5rem;
+  }
+  .map-grid figure { margin: 0; }
+  .map-grid figure img { max-height: 280px; }
+
+  /* ── SIDEBAR / PULL QUOTE ── */
+  .pull-quote {
+    margin: 2rem 0;
+    padding: 1.4rem 1.6rem;
+    border-left: 3px solid var(--gold);
+    background: #f0ebe0;
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: var(--brown);
+  }
+  .pull-quote cite {
+    display: block;
+    margin-top: 0.6rem;
+    font-size: 0.78rem;
+    font-style: normal;
+    font-family: 'Crimson Pro', serif;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--caption);
+  }
+
+  /* ── DATA TABLE / SIDEBAR ── */
+  .info-box {
+    background: #f0ebe0;
+    border: 1px solid var(--rule);
+    padding: 1.2rem 1.4rem;
+    margin: 1.8rem 0;
+    font-size: 0.88rem;
+  }
+  .info-box h4 {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--brown);
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .info-box dl { display: grid; grid-template-columns: 1fr 1.5fr; gap: 0.25rem 1rem; }
+  .info-box dt { font-weight: 600; color: var(--caption); }
+  .info-box dd { color: var(--ink); }
+
+  /* ── SOURCES ── */
+  .sources {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid var(--rule);
+  }
+  .sources h3 { margin-top: 0; }
+  .sources ul {
+    list-style: none;
+    font-size: 0.82rem;
+    color: var(--caption);
+    line-height: 1.7;
+    columns: 2;
+    gap: 1.5rem;
+  }
+  .sources ul li { margin-bottom: 0.4rem; padding-left: 1em; text-indent: -1em; break-inside: avoid; }
+  @media (max-width: 560px) { .sources ul { columns: 1; } }
+
+  /* ── FOOTER ── */
+  .page-footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: var(--caption);
+    letter-spacing: 0.08em;
+    font-style: italic;
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    margin: 1.5rem 0 2rem;
+    border-left: 2px solid var(--rule);
+    padding-left: 1.5rem;
+  }
+  .timeline-item { position: relative; margin-bottom: 1.1rem; }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.88rem;
+    top: 0.45rem;
+    width: 9px; height: 9px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--warm-white);
+    box-shadow: 0 0 0 1px var(--gold);
+  }
+  .timeline-item .year {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--brown);
+    text-transform: uppercase;
+    display: block;
+  }
+  .timeline-item p { margin-bottom: 0; font-size: 0.9rem; text-indent: 0 !important; text-align: left; }
+
+  /* ── ORNAMENT ── */
+  .ornament {
+    text-align: center;
+    color: var(--gold);
+    font-family: 'IM Fell English', serif;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    letter-spacing: 0.3em;
+  }
+
+  /* ── GIS SCREENSHOT SPECIAL ── */
+  .gis-figure {
+    border: 2px solid var(--brown);
+    margin: 2rem 0;
+  }
+  .gis-figure img {
+    filter: none;
+  }
+
+  a { color: var(--brown); }
+
+  /* ── CHARTS & TABLES ── */
+  .chart-frame {
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 1.4rem 1.4rem 1rem;
+    margin: 2rem 0;
+  }
+  .chart-title {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--brown);
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+  }
+  .chart-note {
+    font-size: 0.82rem;
+    color: var(--caption);
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .village-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.84rem;
+    margin-top: 0.5rem;
+  }
+  .village-table th {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--brown);
+    border-bottom: 2px solid var(--gold);
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    background: var(--faint);
+  }
+  .village-table td {
+    padding: 0.4rem 0.6rem;
+    border-bottom: 1px solid var(--faint);
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  .village-table td:first-child {
+    font-weight: 600;
+    color: var(--brown);
+    white-space: nowrap;
+  }
+  .village-table tr:hover td { background: var(--faint); }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 0.8rem;
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+  .info-grid > div {
+    background: var(--warm-white);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.8rem;
+  }
+  .info-grid em {
+    font-size: 0.8rem;
+    color: var(--caption);
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ COVER ══════════════════ -->
+<div class="cover">
+  <div class="cover-border"></div>
+  <div class="cover-corner tl"></div>
+  <div class="cover-corner tr"></div>
+  <div class="cover-corner bl"></div>
+  <div class="cover-corner br"></div>
+
+  <p class="cover-subtitle">A Land History</p>
+  <div class="cover-rule"></div>
+  <h1>The Land Beneath Your Feet</h1>
+  <div class="cover-rule"></div>
+  <p class="cover-subtitle" style="margin-top:1rem; font-size:1rem; color:#c9b99a;">
+    330 Rice Mountain Road, East Warren, Vermont<br>
+    <span style="letter-spacing:0.05em;">Prickly Mountain — Parcel #0380049</span>
+  </p>
+  <div class="cover-parcel-badge">Norton · Donnenfeld · Berrien &nbsp;·&nbsp; 2025</div>
+  <div class="cover-meta">
+    550 Million Years of Geology &nbsp;·&nbsp; Abenaki Stewardship<br>
+    European Settlement &nbsp;·&nbsp; The Age of Sheep &nbsp;·&nbsp; Design-Build Movement
+  </div>
+</div>
+
+<!-- ══════════════════ MAIN DOCUMENT ══════════════════ -->
+<div class="page">
+
+  <div class="running-head">
+    <span>330 Rice Mountain Road · Warren, Vermont</span>
+    <span>A Land History</span>
+  </div>
+
+  <!-- ── INTRODUCTION ── -->
+  <span class="chapter-number">Introduction</span>
+  <h2>A Parcel at the Crossroads of Time</h2>
+  <div class="section-rule"></div>
+
+  <p class="dropcap">The fifty-odd acres at 330 Rice Mountain Road occupy a remarkable position — geological, cultural, and architectural all at once. Sitting at roughly 1,400 to 1,800 feet elevation on the wooded flanks of Rice Mountain above East Warren, the parcel is land shaped by half a billion years of mountain-building, scoured by mile-thick glaciers, stewarded by the Western Abenaki for millennia, cleared and farmed by European settlers for a century, abandoned to forest regrowth, and ultimately settled by one of the founding residents of the Dimetrodon — the iconic structure at the heart of America's design-build architectural movement.</p>
+
+  <p>Few parcels anywhere carry such layered meaning. What follows is the full story of this land, from bedrock to present day.</p>
+
+  <div class="info-box">
+    <h4>Parcel Record — Warren GIS</h4>
+    <dl>
+      <dt>Address</dt><dd>330 Rice Mountain Road, Warren VT 05674</dd>
+      <dt>Parcel #</dt><dd>0380049 (MapSheet 038)</dd>
+      <dt>PID</dt><dd>690-219-12136</dd>
+      <dt>Owner</dt><dd>Norton John / Donnenfeld</dd>
+      <dt>Mailing</dt><dd>PO Box 243, Warren VT 05674</dd>
+      <dt>Location</dt><dd>East Warren / Prickly Mountain area</dd>
+      <dt>Coordinates</dt><dd>44.062406°N, 72.825852°W</dd>
+    </dl>
+  </div>
+
+  <figure class="gis-figure">
+    <img src="/rice-mountain/images/usa_vermont_map.svg.png"
+         alt="Warren VT GIS parcel map showing Parcel 0380049 at 330 Rice Mountain Road, highlighted in yellow">
+    <figcaption><strong>Fig. 1 · Current Parcel Map</strong> — Warren, Vermont GIS showing Parcel #0380049 (highlighted in yellow) at 330 Rice Mountain Road, East Warren. The parcel encompasses the eastern slope of Rice Mountain above the East Warren plateau. Owner: Norton John / Donnenfeld. Source: Warren VT CAI GIS System, 2025.</figcaption>
+  </figure>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── GEOLOGY ── -->
+  <span class="chapter-number">Chapter I</span>
+  <h2>Ancient Oceans, Colliding Continents</h2>
+  <div class="section-rule"></div>
+  <h3>Bedrock Geology — 550 Million Years</h3>
+
+  <p class="dropcap">The bedrock beneath 330 Rice Mountain Road is ancient ocean floor. The schists, phyllites, and quartzites that form the bones of Rice Mountain originated as sediments and volcanic materials deposited on the floor of the <em>Iapetus Ocean</em> between 550 and 450 million years ago, during the late Precambrian and early Paleozoic eras. The dominant formations in this area include the <strong>Hazens Notch Formation</strong> — rusty-weathering graphitic schist and quartzite — and the <strong>Fayston Formation</strong>, a silvery-green albite-chlorite-muscovite-quartz schist named for Warren's neighboring town.</p>
+
+  <p>These rocks were compressed, folded, and metamorphosed during at least three mountain-building events: the Taconic Orogeny (~450 mya), the Acadian Orogeny (~400 mya), and the Salinic Orogeny (~420 mya). The steeply tilted rock layers visible at Warren Falls record immense tectonic forces that built and rearranged the Green Mountains across hundreds of millions of years. What we call the Green Mountains are the deeply eroded roots of what were once Himalayan-scale peaks.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/killington.jpg"
+         alt="Vermont State Bedrock Geologic Map"
+         style="max-height:360px; object-fit:cover; object-position:center;">
+    <figcaption><strong>Fig. 2 · Vermont Bedrock Geology</strong> — The schists and phyllites of central Vermont's Green Mountains (greens and blues in the map's central spine) formed from seafloor sediments deposited 450–550 million years ago in the Iapetus Ocean. The Warren / Mad River Valley area lies in this metamorphic core. Source: USGS / Vermont Geological Survey.</figcaption>
+  </figure>
+
+  <h3>The Last Ice Age — Wisconsin Glaciation</h3>
+
+  <p>Far more recently — though still in deep geological time — the <strong>Laurentide Ice Sheet</strong> buried everything. During the Wisconsin glaciation's Last Glacial Maximum, roughly 25,000 to 21,000 years ago, more than a mile of ice covered the Mad River Valley. Even the highest Green Mountain summits were submerged. The glacier sculpted the valley into its characteristic U-shape, deposited a thin veneer of rocky till across the hillsides, and left behind enormous erratic boulders carried from miles away.</p>
+
+  <p>As the ice retreated northward through central Vermont approximately 13,500 to 14,000 years ago, meltwater filled the Mad River Valley with a temporary arm of <strong>Glacial Lake Winooski</strong>, depositing fine clays and sands on the valley floor. Rice Mountain's soils today are the direct legacy of that glacial episode: the dominant <strong>Tunbridge-Lyman soil complex</strong> — Vermont's official State Soil — is a well-drained, rocky, acidic loam formed from glacial till over schist bedrock, typically only 20 to 40 inches deep before hitting stone.</p>
+
+  <p>These thin, stony soils frustrated farmers for generations but sustain a magnificent northern hardwood forest. They are also why the parcel is strewn with glacial erratics — boulders that seemingly have no local explanation, dropped by the melting ice sheet.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/glacial_lakes.jpg"
+         alt="Glacial lakes of Vermont"
+         style="max-height:320px; object-position:center top;">
+    <figcaption><strong>Fig. 3 · Glacial Vermont</strong> — Following glacial retreat ~13,500 years ago, meltwater pooled into temporary lakes throughout Vermont's valleys. The Mad River Valley held a short-lived glacial lake that deposited the clay-rich soils still found on the valley floor below Rice Mountain today. Source: Vermont Department of Environmental Conservation.</figcaption>
+  </figure>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── ABENAKI ── -->
+  <span class="chapter-number">Chapter II</span>
+  <h2>N'dakinna — The Abenaki Homeland</h2>
+  <div class="section-rule"></div>
+
+  <p class="dropcap">Long before any European set foot in the Mad River Valley, this landscape belonged to the <strong>Western Abenaki</strong> (Alnôbak — "the People"), whose homeland, <em>N'dakinna</em> ("Our Land"), encompassed all of Vermont. Archaeological evidence demonstrates continuous indigenous presence in Vermont for at least 10,000 to 13,000 years, reaching back to the very period when glaciers were receding and the first tundra vegetation was colonizing bare ground.</p>
+
+  <p>The Mad River Valley was not peripheral to Abenaki life — it was a corridor. The Mad River flows north into the <strong>Winooski River</strong> (Winoskitekw, "Onion Land River"), one of the most important indigenous travel and trade routes in the Northeast, connecting the Lake Champlain basin to the Connecticut River valley and beyond.</p>
+
+  <div class="pull-quote">
+    "The long-held notion that indigenous peoples avoided Vermont's mountains was a myth — the Abenaki used all of the landscape, including the mountains."
+    <cite>— Forest Service Archaeologist David Lacy, following excavations at Warren Falls, 2010–2012</cite>
+  </div>
+
+  <p>Excavations at <strong>Warren Falls</strong> between 2010 and 2012 uncovered a prehistoric stone tool-making site — thousands of quartzite flakes from tool manufacturing, dating to the last 2,500 years. State Archaeologist Jess Robinson noted that additional sites in neighboring Waitsfield contain stone tools from the late Archaic period, 3,000 to 5,000 years ago. A fluted spear point found in the Moretown–Waitsfield area dates to 10,000–13,000 years old — virtually to the moment the glaciers retreated.</p>
+
+  <p>The upland terrain around Rice Mountain — at 1,200 to 1,800 feet, well below the alpine zone — would have been traversed seasonally by small family bands as part of a mobile, river-centric way of life. Abenaki life followed the seasons: river valleys in summer and fall for fishing and planting; upland forests in winter for hunting deer, moose, and bear. Rice Mountain would have been winter hunting ground.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/abenaki.jpg"
+         alt="Western Abenaki woman, c.1850s"
+         style="max-height:260px; object-fit:cover; object-position:top center;">
+    <figcaption><strong>Fig. 4 · Western Abenaki</strong> — The Alnôbak ("the People") occupied N'dakinna — all of Vermont and surrounding lands — for at least 10,000 years before European contact. Archaeological sites in the Mad River Valley confirm their presence as far up the watershed as Warren Falls. Source: Vermont Historical Society / Wikimedia Commons.</figcaption>
+  </figure>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── SETTLEMENT ── -->
+  <span class="chapter-number">Chapter III</span>
+  <h2>Charter, Axe, and Clearing</h2>
+  <div class="section-rule"></div>
+  <h3>The Founding of Warren, 1789–1820</h3>
+
+  <p class="dropcap">The town of Warren was born in the aftermath of the American Revolution. On November 9, 1780, <strong>John Throop and 67 associates</strong> received a grant of 16,660 acres from the Vermont legislature. Nine years of delays followed — the proprietors struggled to raise the charter fees — before Warren was formally chartered on <strong>October 20, 1789</strong>, the same year George Washington took office as president. The town was named for <strong>Dr. Joseph Warren</strong>, the Revolutionary War hero killed at Bunker Hill.</p>
+
+  <p>The first settlers arrived in <strong>1797</strong>: Samuel Lard (or Laird) and Seth Leavitt, soon joined by Asahel Young, "a famous bear hunter," who built a log cabin and a grist mill. The first town meeting convened on September 20, 1798, with twelve men in attendance. Samuel Lard was elected the first town clerk; the first selectmen were Ruel Sherman, Joseph Raymond, and Seth Leavitt.</p>
+
+  <p>Crucially for this parcel's story: <strong>East Warren was settled first</strong>. The eastern upland plateau — at roughly 1,200 feet, away from the flood-prone Mad River — offered the best farmland in the township: better drainage, easier clearing, and drier conditions than the heavily thicketed valley floor. Here the settlers built a school (today the East Warren Community Market building), a tavern, a blacksmith shop, a church, and a post office. For the first two decades of Warren's existence, East Warren was the center of town life.</p>
+
+  <p>The charter required each proprietor to "plant and cultivate five acres and build a house," and families pushed progressively upward onto increasingly steep terrain as the lower plateau filled. The hills surrounding the East Warren plateau — including what would become known as Prickly Mountain and Rice Mountain — were cleared in waves through the early 19th century.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/whitelaw_map_1796.jpg"
+         alt="James Whitelaw Map of Vermont 1796"
+         style="max-height:380px;">
+    <figcaption><strong>Fig. 5 · Whitelaw Map of Vermont, 1796</strong> — Vermont's first accurate state map, drawn by Surveyor General James Whitelaw just seven years after Warren's 1789 charter. Warren appears as a newly platted township in Washington County. The Mad River Valley road network is embryonic; most hill farms on Rice Mountain had not yet been established. Available: Library of Congress, loc.gov/item/2011589152.</figcaption>
+  </figure>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── SHEEP ERA ── -->
+  <span class="chapter-number">Chapter IV</span>
+  <h2>When Sheep Outnumbered People Six to One</h2>
+  <div class="section-rule"></div>
+  <h3>The Agricultural Transformation, 1810–1890</h3>
+
+  <p class="dropcap">The agricultural transformation of Rice Mountain was dramatic and swift. When Europeans arrived, over 95 percent of Vermont was covered with dense old-growth forest. Within sixty years that figure was essentially inverted. By 1850 to 1880, roughly 70 to 80 percent of Vermont's land had been cleared — including the steep hillsides of Rice Mountain. The driving force was wool.</p>
+
+  <p>In 1811, <strong>William Jarvis</strong>, the U.S. Consul to Portugal, imported nearly 16,000 fine-wooled Merino sheep from Spain to his Vermont farm, igniting "Merino Mania." The sheep were perfectly suited to rocky, steep terrain — their cleft lips allowed them to graze on almost anything, and wool was non-perishable, solving the hill farmer's transport problem. By <strong>1840, Vermont held 1.7 million sheep</strong> against a human population of fewer than 300,000 — nearly six sheep per person.</p>
+
+  <p>Warren's 1849 statistics tell the story directly: the town produced <strong>14,667 pounds of wool</strong> alongside 44,081 bushels of potatoes, 2,054 tons of hay, and 26,934 pounds of maple sugar. The hillsides around Rice Mountain Road were almost entirely treeless during this era — open, rocky sheep pasture divided by the stone walls that farmers built from the glacial cobbles their plows turned up each spring.</p>
+
+  <div class="pull-quote">
+    "Warren is watered by Mad River, and although between the two Green Mountain ranges, the surface is not much broken… about 4,000 sheep are kept."
+    <cite>— John Hayward, <em>Gazetteer of Vermont</em>, 1839</cite>
+  </div>
+
+  <h3>Stone Walls — The Quiet Archive</h3>
+  <p>Most of the stone walls now running through the forests of Rice Mountain were built between 1780 and 1850 — not as deliberate architecture but as "linear landfills," disposal piles for the endless supply of frost-heaved glacial cobbles. An 1872 USDA report estimated 240,000 miles of stone walls across New England — enough to circle the globe four times. These walls are among the most important historical artifacts on the parcel. Their presence in mature forest is conclusive proof of former farmland.</p>
+
+  <h3>Collapse and Abandonment, 1845–1900</h3>
+  <p>The collapse came quickly. Wool prices fell from 57 cents per pound in 1835 to 25 cents by the late 1840s as western competition, enabled by the Erie Canal and railroads, undercut Vermont farmers. Two-thirds of Vermont's sheep were killed between 1846 and 1850. Hill farms proved especially vulnerable: dairy — the successor crop — required more tillable land for feed, and new machinery designed for flat western fields was useless on stony hillsides.</p>
+
+  <p>By 1850, a Fayston hill farm of 200 acres was valued at just $600, while a comparable valley farm in Waitsfield fetched $4,500 — a sevenfold difference. Local historian Lyssa Papazian documented that the <strong>Blair family</strong> had a hilltop farm "near Buzzell Road in the Prickly Mountain area," settled in the 1870s. In <strong>1896, they abandoned it</strong>, moving down to more productive plateau land. Fourth-generation descendant Ken Blair confirmed that the high land was "never farmed after 1900 and now consists of a mature hardwood forest." This pattern was repeated across dozens of hilltop farms in Warren. By 1965, only six farms remained in the entire town.</p>
+
+  <div class="map-grid">
+    <figure>
+      <img src="/rice-mountain/images/weathersfield_vt.jpg"
+           alt="Vermont sheep farm circa 1900"
+           style="max-height:260px;">
+      <figcaption><strong>Fig. 6</strong> — Vermont hill farm at peak clearing, c.1900. Hillsides like Rice Mountain were nearly treeless during the sheep era, divided by stone walls still visible in the forest today.</figcaption>
+    </figure>
+    <figure>
+      <img src="/rice-mountain/images/merino_sheep.jpg"
+           alt="Merino sheep Vermont">
+      <figcaption><strong>Fig. 7</strong> — Merino sheep, the breed that transformed Vermont. By 1840, Vermont held 1.7 million sheep — six per person. Warren produced 14,667 lbs of wool in 1849.</figcaption>
+    </figure>
+  </div>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── MAPS ── -->
+  <span class="chapter-number">Chapter V</span>
+  <h2>The Maps That Saw It</h2>
+  <div class="section-rule"></div>
+  <h3>Historical Cartography of Warren &amp; Rice Mountain</h3>
+
+  <p class="dropcap">Several key historical maps document the evolution of the Rice Mountain and East Warren landscape across two centuries. Taken together they form a visual timeline of the parcel's transformation from wilderness to farm to forest.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/whitelaw_map_1796.jpg"
+         alt="H.F. Walling Map of Washington County Vermont 1858">
+    <figcaption><strong>Fig. 8 · H.F. Walling, Map of Washington County, Vermont, 1858</strong> — This large-format wall map, produced at the peak of the sheep era, shows individual property owners' names, buildings, mills, and roads across the county. The East Warren and Rice Mountain area appears with farmsteads named. At this moment, the hillsides of Rice Mountain would have been largely cleared pasture. Available free: Library of Congress, <em>loc.gov/item/2012586238</em>.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/rice-mountain/images/warren_village.jpg"
+         alt="Walling 1858 Washington County VT map">
+    <figcaption><strong>Fig. 9 · Detail, Washington County Map, 1858</strong> — The Mad River Valley, Waitsfield, Warren, and the eastern hill farms. Note the road network reaching into the upper elevations toward what will become Prickly Mountain. Source: Library of Congress Geography and Map Division.</figcaption>
+  </figure>
+
+  <p>The <strong>F.W. Beers Atlas of Washington County (1873)</strong> is perhaps the single most important historical map for this parcel. It contains a detailed cadastral map of Warren showing every homestead with the owner's name, plus inset maps of Warren Village and East Warren. It captures the brief "renaissance of hill farming" driven by immigrant families revitalizing slopes that would be abandoned within a generation. The atlas is viewable at <a href="https://www.historicmapworks.com/Atlas/US/8088/" target="_blank">historicmapworks.com</a> and available as reproductions from WardMaps and Maps of Antiquity.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/warren_village_2.jpg"
+         alt="Beers Atlas 1873 Warren Vermont">
+    <figcaption><strong>Fig. 10 · F.W. Beers Atlas, Warren, Vermont, 1873</strong> — This cadastral map shows individual property owners' names on every farmstead in Warren, including East Warren and the Rice Mountain hillsides. The parcel's 19th-century owners can be identified through this map. Full atlas viewable at <em>historicmapworks.com/Atlas/US/8088/</em> · Reproduction available: WardMaps LLC.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="/rice-mountain/images/usa_vermont_map.svg.png"
+         alt="USGS Warren Vermont 1972 topographic map">
+    <figcaption><strong>Fig. 11 · USGS Warren Quadrangle, 7.5-Minute Topographic Map, 1972</strong> — First surveyed in 1970 using 1965 aerial photographs, this map captures the landscape at the exact moment the Prickly Mountain community was forming. Rice Mountain Road, Prickly Mountain Road, and the East Warren road network appear in detail. The parcel (Parcel #0380049) occupies the ridge south of the "Rice Mountain" label. Download free: <em>ngmdb.usgs.gov/topoview</em>.</figcaption>
+  </figure>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <span class="year">1796</span>
+      <p>Whitelaw Map of Vermont — Warren newly chartered, minimal settlement. Available: Library of Congress <em>loc.gov/item/2011589152</em>.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">1858</span>
+      <p>Walling Map of Washington County — Peak sheep era. Individual farm names on hillsides. Available: Library of Congress <em>loc.gov/item/2012586238</em>.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">1873</span>
+      <p>Beers Atlas of Washington County — Most detailed 19th-century cadastral source. Each homestead named. Available: <em>historicmapworks.com/Atlas/US/8088</em>.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">1919–21</span>
+      <p>USGS Lincoln Mountain 15-minute Quadrangle — First topographic map of area. Shows road network and buildings during farm abandonment era. Available: <em>ngmdb.usgs.gov/topoview</em>.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">1972–77</span>
+      <p>USGS Warren 7.5-minute Quadrangle — Surveyed 1970, aerial photos 1965. Captures Prickly Mountain community's founding era. Available: <em>ngmdb.usgs.gov/topoview</em>.</p>
+    </div>
+    <div class="timeline-item">
+      <span class="year">2025</span>
+      <p>Warren CAI GIS System — Current parcel boundaries, assessment data, abutters. Available: <em>gishost.cdmsmithgis.com/warrenvt</em>.</p>
+    </div>
+  </div>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── PRICKLY MOUNTAIN ── -->
+  <span class="chapter-number">Chapter VI</span>
+  <h2>Prickly Mountain and the Architecture of Freedom</h2>
+  <div class="section-rule"></div>
+  <h3>The Design-Build Movement, 1964–Present</h3>
+
+  <p class="dropcap">The cheap, reforested hillsides of East Warren attracted an unlikely new wave of settlers in the mid-1960s — and the result was one of the most significant episodes in American architectural history. In 1964–65, <strong>David Sellers</strong>, a 26-year-old graduate of the Yale School of Architecture, and four friends were skiing at Sugarbush when they decided to stay. Sellers purchased approximately 400 to 450 acres of wooded land in East Warren with a <strong>$1,000 down payment</strong>. The land had been farmland a century earlier; now it was forest. Washington County had no building codes. The unnamed mountain was christened "Prickly Mountain" after architect John Lucas inadvertently sat on a raspberry bush.</p>
+
+  <p>Sellers and fellow Yale graduates <strong>William Reinecke</strong>, <strong>Louis Mackall</strong>, and <strong>Jonathan Hall</strong> set out to do something the architectural profession considered heretical: design and build their own houses simultaneously, with their own hands, without conventional blueprints. The intellectual lineage ran through Yale to the Bauhaus — sculptor Robert Engman, who taught Sellers at Yale, had studied under Josef Albers, a Bauhaus refugee.</p>
+
+  <p>The <strong>Tack House</strong> (1965–66), the first structure, was built from a rough foundation sketch and nothing more. <em>Progressive Architecture</em> called it <strong>"architectural blastoff"</strong> in May 1966. Then came the <strong>Bridge House</strong> (1966), entered via an 80-foot wooden bridge from the hillside; <em>Life</em> magazine featured it in March 1967: "From the midst of snow-steeped spruces on the mountainside, a new shape jumps — that's just the word — against a Vermont sky." That <em>Life</em> spread drew disaffected architects from across the country.</p>
+
+  <h3>The Dimetrodon — and Its Connection to This Parcel</h3>
+
+  <p>In 1970–71, three University of Pennsylvania graduates — <strong>James Sanford</strong>, <strong>Richard Travers</strong>, and <strong>William Maclay</strong> — arrived and conceived the <strong>Dimetrodon</strong>, a multi-family condominium megastructure on Dimetro Road. Built from a cardboard model with no other planning, each family constructed its own apartment within the shared skeleton. The five original Dimetrodon residents were Sanford, Maclay, Travers, <strong>Sucosh Norton</strong>, and Coleman.</p>
+
+  <p>Norton — the owner of this parcel — is not merely a neighbor of Prickly Mountain. He is one of its foundational figures. After the Dimetrodon years, all five original residents dispersed to individual properties within a mile or two of the structure. Architect Jim Sanford designed houses for Norton on the Rice Mountain Road property. Norton went on to found <strong>Union Woodworks</strong>, lead the pattern shop at <strong>Vermont Castings</strong>, serve as president of <strong>North Wind Power</strong> (later Northern Power Systems), and become COO of <strong>Controlled Energy Corporation</strong>. His wife, <strong>Roni Donnenfeld</strong>, is a longtime Warren community member.</p>
+
+  <div class="pull-quote">
+    "There is no distinction between design and building. The act of construction is itself a design process."
+    <cite>— David Sellers, on the Prickly Mountain design-build philosophy</cite>
+  </div>
+
+  <p>The Prickly Mountain community spawned <strong>Yestermorrow Design/Build School</strong> (founded 1980 in Waitsfield), <strong>Vermont Castings</strong> woodstoves, <strong>NRG Systems</strong> wind energy, and the <strong>Madsonian Museum of Industrial Design</strong>. Sellers was named one of the world's top 100 architects by <em>Architectural Digest</em> and received an AIA lifetime achievement award in 2017. He died on February 9, 2025, at age 86.</p>
+
+  <div class="map-grid">
+    <figure>
+      <img src="/rice-mountain/images/warren_village.jpg"
+           alt="Prickly Mountain Tack House">
+      <figcaption><strong>Fig. 12</strong> — The Tack House (1965–66), David Sellers's first Prickly Mountain structure, called "architectural blastoff" by <em>Progressive Architecture</em> in 1966. Source: Wikimedia / DOCOMOMO.</figcaption>
+    </figure>
+    <figure>
+      <img src="/rice-mountain/images/warren_village_2.jpg"
+           alt="The Dimetrodon, Warren Vermont">
+      <figcaption><strong>Fig. 13</strong> — The Dimetrodon (1971), Prickly Mountain's communal megastructure. Sucosh Norton — owner of this parcel — was one of the five original residents. Architect Jim Sanford later designed homes for Norton on Rice Mountain Road.</figcaption>
+    </figure>
+  </div>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── SKI ERA ── -->
+  <span class="chapter-number">Chapter VII</span>
+  <h2>Skiing Transforms the Valley</h2>
+  <div class="section-rule"></div>
+
+  <p class="dropcap">Before World War II, Warren was a declining agricultural community of 654 people. Two ski areas changed everything — and created the economic and social conditions that made Prickly Mountain possible.</p>
+
+  <p><strong>Mad River Glen</strong> opened first, founded in <strong>1947</strong> by Roland Palmedo, a Navy pilot who had grown disillusioned with commercial skiing. Palmedo scouted General Stark Mountain from his airplane, purchased 700 acres from Ward Lumber, and installed the fastest single chairlift in the world. His philosophy — "a ski area is not just a mountain amusement park" — endures. In <strong>1995, Mad River Glen became the first cooperatively owned ski area in America</strong>, purchased by skier-shareholders to preserve its character. It was listed on the <strong>National Register of Historic Places in 2012</strong> — the only ski area with that honor — and its motto, "Ski It If You Can," still stands.</p>
+
+  <p><strong>Sugarbush</strong> opened Christmas 1958, created by Yale graduate Damon Gadd. The resort quickly became Manhattan's winter playground. Designer Oleg Cassini coined the term "jet set" for the New Yorkers who flew up for weekends; Norwegian Olympic champion Stein Eriksen ran the ski school; the resort was nicknamed "Mascara Mountain" for its glamorous clientele. It was the ski economy — and the cheap, cleared land it left behind — that brought the Yale architects to Warren. They came for skiing and stayed to build something entirely new.</p>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── EAST WARREN ── -->
+  <span class="chapter-number">Chapter VIII</span>
+  <h2>East Warren — The Original Village</h2>
+  <div class="section-rule"></div>
+
+  <p class="dropcap">East Warren, perched on its upland plateau above the Mad River Valley, was Warren's first center of life. Here the earliest settlers built their farms, their school, their church. By the 1820s the commercial center had shifted west to Warren Village — drawn by the mill sites on the Mad River — but East Warren remained what it is today: a quiet, self-contained community defined by its relationship to the hills above it.</p>
+
+  <p>The <strong>East Warren Community Market</strong>, at 42 Roxbury Mountain Road, occupies the very building that housed Warren's first school. Reinvented as a cooperative country store in 2009, it sells local produce, baked goods, and craft beer, and serves as the practical and social hub of the community.</p>
+
+  <p>The <strong>Warren Covered Bridge</strong>, a 57-foot queen-post truss bridge built in 1879–80 by Walter Bagley, crosses the Mad River in Warren Village below. Listed on the National Register of Historic Places since 1974, it survived both the catastrophic <strong>1927 flood</strong> — which destroyed all four village dams and ended Warren's manufacturing era — and Hurricane Irene in 2011. It remains one of the most photographed landmarks in central Vermont.</p>
+
+  <figure>
+    <img src="/rice-mountain/images/warren_covered_bridge.jpg"
+         alt="Warren Covered Bridge Vermont">
+    <figcaption><strong>Fig. 14 · Warren Covered Bridge, 1879–80</strong> — Built by Walter Bagley in a queen-post truss design, this 57-foot bridge crosses the Mad River at Warren Village. Listed on the National Register of Historic Places (1974), it survived the 1927 flood and Hurricane Irene. It stands a mile and a half west of the Rice Mountain Road parcel. Source: Wikimedia Commons.</figcaption>
+  </figure>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── THE LAND TODAY ── -->
+  <span class="chapter-number">Chapter IX</span>
+  <h2>The Land as It Stands</h2>
+  <div class="section-rule"></div>
+  <h3>Ecology, Artifacts, and Second Growth</h3>
+
+  <p class="dropcap">Walk the woods at 330 Rice Mountain Road and you walk through a landscape whose every feature tells a story. The mature second-growth northern hardwood forest — sugar maple, American beech, yellow birch, with pockets of white pine, hemlock, and red spruce — has been growing for roughly 125 years since the last hill farmers abandoned these slopes around 1896–1900.</p>
+
+  <p>The most eloquent relics are the <strong>stone walls</strong> that run through the trees: markers of pasture boundaries that no longer exist, built primarily between 1780 and 1850 when farmers pulled frost-heaved glacial cobbles from their fields and stacked them at the edges. Stone walls in mature forest are conclusive proof of former cleared farmland.</p>
+
+    <p>Other artifacts scatter through the understory: <strong>cellar holes</strong> from former farmsteads, remnant apple trees overtopped by surrounding hardwoods, multi-trunked "pasture pines" whose leaders were repeatedly killed by the white pine weevil as they grew in the open, juniper bushes (a reliable indicator of former pasture), and possibly lengths of barbed wire now embedded in tree trunks — swallowed by a century of cambial growth.</p>
+
+  <p>The thin, rocky Tunbridge-Lyman soils that frustrated farmers for generations sustain the forest beautifully. Northern hardwoods thrive in these well-drained, acidic conditions. At 1,400 to 1,800 feet elevation the parcel sits in the Northern Hardwood Forest zone, possibly transitioning toward yellow birch and red spruce at its uppermost reaches. The terrain is moderate to steep, punctuated by bedrock outcrops and glacial erratics — boulders arrived here roughly 14,000 years ago, carried by the glacier and set down when the ice finally melted.</p>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── WARREN VILLAGE HISTORY ── -->
+  <span class="chapter-number">Chapter X</span>
+  <h2>Warren Village — From Mills to Mountain Town</h2>
+  <div class="section-rule"></div>
+  <h3>The Rise and Transformation of a Vermont Community</h3>
+
+  <p class="dropcap">Warren Village grew up along the Mad River because water meant power. From the 1820s onward, the river's drop through the narrow valley drove the saws, grindstones, and fulling stocks that transformed raw timber and wool into cash. The mills drew settlement westward from the original East Warren plateau, and by mid-century Warren Village had become the commercial heart of the township — with stores, a tavern, a post office, a covered bridge, and the political institutions of a going Vermont town.</p>
+
+  <p>The village's industrial era peaked roughly 1840–1880. At its height Warren supported <strong>multiple sawmills, a grist mill, a tannery, a fulling mill</strong> (which processed raw wool into finished cloth), and at least one carding mill. All were powered by the Mad River or its tributaries. The 1873 Beers Atlas inset map of Warren Village documents the full array of buildings at this moment — the village at maximum industrial density, just before the long contraction began.</p>
+
+  <!-- WARREN VILLAGE BUILDINGS TIMELINE -->
+  <div class="chart-frame">
+    <p class="chart-title">Warren Village — Key Buildings &amp; Institutions, 1798–2009</p>
+    <div style="overflow-x:auto;">
+      <table class="village-table">
+        <thead>
+          <tr><th>Year</th><th>Structure / Institution</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1797–98</td><td>First log cabin &amp; grist mill</td><td>Built by Asahel Young, East Warren</td></tr>
+          <tr><td>1798</td><td>First town meeting</td><td>12 voters; East Warren</td></tr>
+          <tr><td>c. 1800</td><td>First schoolhouse</td><td>East Warren; later became East Warren Community Market</td></tr>
+          <tr><td>c. 1810</td><td>First church</td><td>East Warren; first deacon James Allen, cousin of Ethan Allen</td></tr>
+          <tr><td>c. 1820s</td><td>Warren Village sawmill complex</td><td>Shift of center west to Mad River valley</td></tr>
+          <tr><td>c. 1840s</td><td>Tannery, fulling mill, carding mill</td><td>Industrial peak; Warren Village</td></tr>
+          <tr><td>c. 1860s</td><td>Warren Town Hall (original)</td><td>Village; site of town meetings &amp; civic functions</td></tr>
+          <tr><td>1872</td><td>Warren Free Public Library founded</td><td>One of the oldest free libraries in Vermont</td></tr>
+          <tr><td>1879–80</td><td>Warren Covered Bridge</td><td>Queen-post truss; built by Walter Bagley; NRHP 1974</td></tr>
+          <tr><td>1880s–90s</td><td>Hill farm abandonment begins</td><td>Blair farm (Prickly Mountain area) abandoned 1896</td></tr>
+          <tr><td>1927</td><td>Great Flood</td><td>Destroyed all four village dams; ended manufacturing era</td></tr>
+          <tr><td>1947</td><td>Mad River Glen opens</td><td>General Stark Mountain; Roland Palmedo, founder</td></tr>
+          <tr><td>1958</td><td>Sugarbush opens</td><td>Christmas Day; Damon Gadd; $5.50 lift ticket</td></tr>
+          <tr><td>1964–65</td><td>Prickly Mountain community begins</td><td>David Sellers, 400 acres, $1,000 down</td></tr>
+          <tr><td>1980</td><td>Yestermorrow Design/Build School</td><td>Founded in Waitsfield; direct outgrowth of Prickly Mtn.</td></tr>
+          <tr><td>1995</td><td>Mad River Glen Cooperative</td><td>First cooperatively owned ski area in America</td></tr>
+          <tr><td>2009</td><td>East Warren Community Market opens</td><td>Former schoolhouse; cooperative country store</td></tr>
+          <tr><td>2012</td><td>Mad River Glen — NRHP listing</td><td>Only ski area on National Register of Historic Places</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h3>The 1927 Flood: End of the Industrial Village</h3>
+
+  <p>The mills that powered Warren Village's growth were also its vulnerability. The Mad River, swollen by a catastrophic November rainstorm in 1927, sent a wall of water through the valley that destroyed all four village dams in a matter of hours. Warren lost its manufacturing infrastructure in a single afternoon. The flood is still the defining catastrophic event in local memory — it ended the mill-based economy that had sustained the village for a century, and the village never rebuilt that industrial capacity. What remained was agriculture (already in steep decline), and eventually, the ski industry.</p>
+
+  <p>Hurricane Irene in August 2011 struck again with comparable force, washing out roads and bridges across the Mad River Valley. Warren's covered bridge survived both 1927 and Irene — a testament to the queen-post truss design and the craftsmanship of Walter Bagley's 1879–80 construction.</p>
+
+  <!-- POPULATION CHART -->
+  <div class="chart-frame">
+    <p class="chart-title">Warren, VT — Population, 1800–2020</p>
+    <p class="chart-note">U.S. Census data. Warren's population collapsed with the hill farm abandonment after 1850, stabilized at a low base through the early 20th century, then began recovering with the ski industry after 1950.</p>
+    <canvas id="popChart" height="280"></canvas>
+  </div>
+
+  <!-- SHEEP / WOOL COLLAPSE CHART -->
+  <div class="chart-frame">
+    <p class="chart-title">Vermont Sheep Population vs. Wool Price, 1810–1870</p>
+    <p class="chart-note">The Merino sheep boom and its collapse are the central economic event of Rice Mountain's agricultural era. Wool prices fell by more than half between 1835 and 1850; Vermont's sheep population dropped by two-thirds in four years.</p>
+    <canvas id="sheepChart" height="280"></canvas>
+  </div>
+
+  <!-- FOREST COVER CHART -->
+  <div class="chart-frame">
+    <p class="chart-title">Vermont Forest Cover, 1600–2020 (estimated %)</p>
+    <p class="chart-note">Vermont went from nearly 100% forested to roughly 20–30% by 1880 as hill farms were cleared — then recovered back toward 80% as those farms were abandoned. Rice Mountain's forest is part of this recovery.</p>
+    <canvas id="forestChart" height="260"></canvas>
+  </div>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── OWNERSHIP TRACING ── -->
+  <span class="chapter-number">Chapter XI</span>
+  <h2>Tracing the Deed Chain</h2>
+  <div class="section-rule"></div>
+  <h3>How to Research the Full Ownership History</h3>
+
+  <p class="dropcap">Precise deed chain records for 330 Rice Mountain Road require direct consultation of two sources. The <strong>Warren Town Clerk's office</strong> at 42 Cemetery Road (802-496-2709) holds physical deed books in the vault covering the period before 1982. The <strong>online LR-1 portal</strong> at warren.lr-1.com indexes records from mid-1982 forward and should reveal the Norton–Donnenfeld purchase date and all prior recorded transactions.</p>
+
+  <p>The broader ownership pattern for hill farm land in this area followed a predictable arc, documented across dozens of similar parcels in the Mad River Valley:</p>
+
+  <div style="margin: 2rem 0; border-left: 3px solid var(--gold); padding-left: 1.5rem;">
+    <p style="margin-bottom:0.8rem;"><strong>1790s–1820s · Original settlers</strong><br>Cleared forest for subsistence farms under charter obligations to "plant and cultivate five acres and build a house."</p>
+    <p style="margin-bottom:0.8rem;"><strong>1820s–1870s · Sheep and dairy era</strong><br>Active farming families raised Merino sheep, then attempted the transition to dairy. Hill farms valued at a fraction of valley farms.</p>
+    <p style="margin-bottom:0.8rem;"><strong>1870s–1930s · Abandonment and consolidation</strong><br>As farms failed, land sold cheaply to immigrant families or consolidated into woodlots. Tax sales common. The Blair family's nearby hilltop farm, settled in the 1870s, was abandoned in 1896.</p>
+    <p style="margin-bottom:0.8rem;"><strong>1900s–1960s · Timber and forest recovery</strong><br>Ward Lumber and similar companies purchased abandoned tracts for logging. Second-growth forest established.</p>
+    <p style="margin-bottom:0"><strong>1960s–1980s · Prickly Mountain era acquisition</strong><br>Cheap reforested land attracted the design-build community. David Sellers acquired 400+ acres for a $1,000 down payment. The five Dimetrodon residents transitioned to individual homesteads on adjacent parcels — Sucosh Norton's Rice Mountain Road property almost certainly acquired in this period.</p>
+  </div>
+
+  <div class="info-box">
+    <div class="info-title">Research Resources for Deed Chain</div>
+    <div class="info-grid">
+      <div><strong>Warren Town Clerk</strong><br>42 Cemetery Road, Warren VT<br>802-496-2709<br><em>Physical deed books, pre-1982</em></div>
+      <div><strong>Online LR-1 Portal</strong><br>warren.lr-1.com<br><em>Digital records, mid-1982 forward</em></div>
+      <div><strong>Warren GIS System</strong><br>gishost.cdmsmithgis.com/warrenvt<br><em>Parcel maps, assessment data, abutters</em></div>
+      <div><strong>1873 Beers Atlas</strong><br>historicmapworks.com/Atlas/US/8088<br><em>19th-century owner names by parcel</em></div>
+      <div><strong>Vermont State Archives</strong><br>sos.vermont.gov/vsara<br><em>Original charter lotting plans, 1789</em></div>
+      <div><strong>Washington Co. Courthouse</strong><br>Montpelier, VT<br><em>Full chain-of-title searches via title attorney</em></div>
+    </div>
+  </div>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── CLOSING ── -->
+  <span class="chapter-number">Coda</span>
+  <h2>A Landscape of Accumulated Stories</h2>
+  <div class="section-rule"></div>
+
+  <p class="dropcap">The fifty acres at 330 Rice Mountain Road are not merely real estate. They are a palimpsest — a surface written upon, erased, and written upon again across geological, human, and ecological time. The bedrock records the closing of an ancient ocean. The glacial till records a mile of ice. The stone walls record the labor of Yankee hill farmers and the six-to-one sheep that outnumbered them. The mature hardwoods record a century of abandonment and regrowth. And the house itself — designed by Jim Sanford for Sucosh Norton, one of the Dimetrodon's original five — records the audacious moment when a handful of young architects chose a forgotten Vermont hillside as the place to reinvent their profession.</p>
+
+  <blockquote>"The land was farmed for a hundred years, then given back to the forest. The forest has been growing for another hundred. What comes next is up to the people who live here now."<span>— paraphrase of David Sellers, reflecting on the Prickly Mountain community's relationship to the land</span></blockquote>
+
+  <p>The Abenaki traveled this corridor for ten thousand years. European settlers cleared it bare in fifty. The forest reclaimed it in another hundred. The Prickly Mountain architects made it famous. Each layer enriches the one that follows. To own this land is to stand at the intersection of all these stories, with stone walls underfoot and a forest canopy overhead that would have been unimaginable to the sheep farmers who built those walls — and equally unimaginable to the Abenaki who knew the old-growth forest that came before them.</p>
+
+  <p><em>The land remembers everything. This report is an attempt to help its current stewards remember, too.</em></p>
+
+  <div class="section-break"><span>✦</span></div>
+
+  <!-- ── SOURCES ── -->
+  <span class="chapter-number">Sources &amp; Further Reading</span>
+  <h2>Principal References</h2>
+  <div class="section-rule"></div>
+
+  <div style="font-size:0.88rem; line-height:1.7; color: var(--caption);">
+    <p style="margin-bottom:0.6rem;"><strong>Geology &amp; Glacial History</strong></p>
+    <p>Vermont Geological Survey, <em>Bedrock Geologic Map of Vermont</em> (2011). — Doolan, B.L. et al., "Geology of Vermont" (1996). — Vermont Geological Survey, <em>Surficial Geologic Map of Vermont</em> (1970). — NRCS Web Soil Survey: Tunbridge-Lyman soil series documentation.</p>
+
+    <p style="margin-top:1rem; margin-bottom:0.6rem;"><strong>Indigenous History</strong></p>
+    <p>Lacy, David (USDA Forest Service), Warren Falls Archaeological Survey (2010–2012), unpublished report. — Vermont Division for Historic Preservation, <em>Vermont Archaeological Inventory</em>. — Haviland, William A. and Marjory W. Power, <em>The Original Vermonters</em> (1981; revised 1994). — Vermont State Archaeologist Jess Robinson, quoted in <em>Mad River Valley News</em>.</p>
+
+    <p style="margin-top:1rem; margin-bottom:0.6rem;"><strong>Warren History &amp; Agricultural Era</strong></p>
+    <p>Hartshorn, Katherine Carleton, <em>History of Warren, Vermont</em> (warrenvt.org/wp-content/uploads/2020/10/Katherine-Carleton-Hartshorn-History.pdf). — Papazian, Lyssa, <em>Mad River Valley Hill Farming Study</em> (2013; mrvpd.org). — Thorson, Robert M., <em>Stone by Stone: The Magnificent History in New England's Stone Walls</em> (2002). — U.S. Agricultural Census of Vermont, 1849.</p>
+
+    <p style="margin-top:1rem; margin-bottom:0.6rem;"><strong>Prickly Mountain Architecture</strong></p>
+    <p><em>Progressive Architecture</em>, "Architectural Blastoff," May 1966. — <em>Life</em> magazine, March 1967. — <em>Seven Days Vermont</em>, multiple issues. — Rood, Allie (dir.), <em>Prickly Mountain and My Design Build Life</em> (documentary film, premiered Architecture &amp; Design Film Festival, NYC, October 2025). — American Institute of Architects, Lifetime Achievement Award citation for David Sellers (2017).</p>
+
+    <p style="margin-top:1rem; margin-bottom:0.6rem;"><strong>Ski Industry</strong></p>
+    <p>Mad River Glen Cooperative, historical records (madriverglen.com). — Sugarbush Resort, historical archives. — National Register of Historic Places nomination, Mad River Glen Single Chair Lift (2012).</p>
+
+    <p style="margin-top:1rem; margin-bottom:0.6rem;"><strong>Historical Maps</strong></p>
+    <p>Whitelaw, James, <em>A Correct Map of the State of Vermont</em> (1796) — loc.gov/item/2011589152. — Walling, H.F., <em>Map of Washington County, Vermont</em> (1858) — loc.gov/item/2012586238. — Beers, F.W., <em>Atlas of Washington County, Vermont</em> (1873) — historicmapworks.com/Atlas/US/8088. — USGS Lincoln Mountain 15-min Quadrangle (1919/1921); Warren 7.5-min Quadrangle (1970) — ngmdb.usgs.gov/topoview.</p>
+  </div>
+
+  </main><!-- end main page -->
+
+  <!-- footer -->
+  <footer>
+    <p>Prepared for Sucosh Norton &amp; Roni Donnenfeld · 330 Rice Mountain Road, Warren, Vermont 05674</p>
+    <p>Parcel #0380049 · MapSheet 038 · Coordinates 44.062406°N, 72.825852°W</p>
+    <p style="margin-top:0.5rem; font-size:0.78rem; opacity:0.6;">Research compiled March 2026 · All sources cited above · For deed chain searches contact Warren Town Clerk: 42 Cemetery Road, 802-496-2709</p>
+  </footer>
+
+</div><!-- end page-wrap -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+/* ── CHART DEFAULTS ── */
+Chart.defaults.font.family = "'Crimson Pro', Georgia, serif";
+Chart.defaults.color = '#5c4a35';
+Chart.defaults.plugins.legend.display = true;
+
+const GOLD   = '#b8922a';
+const BROWN  = '#6b4c2a';
+const INK    = '#1a1410';
+const CREAM  = '#f7f3ec';
+const RED    = '#8b3a2a';
+const GREEN  = '#4a7c59';
+const FAINT  = '#e8e0d2';
+
+/* ── POPULATION CHART ── */
+new Chart(document.getElementById('popChart'), {
+  type: 'bar',
+  data: {
+    labels: ['1800','1810','1820','1830','1840','1850','1860','1870','1880','1890','1900','1910','1920','1930','1940','1950','1960','1970','1980','1990','2000','2010','2020'],
+    datasets: [{
+      label: 'Warren Population',
+      data: [190, 480, 780, 1020, 1150, 1080, 960, 870, 810, 750, 700, 670, 650, 654, 630, 660, 840, 1050, 1310, 1510, 1738, 1723, 1985],
+      backgroundColor: function(labels) {
+        // Color bars by era
+        var i = labels.dataIndex;
+        if (i <= 4)  return GOLD;    // settlement / peak
+        if (i <= 10) return RED;     // decline
+        if (i <= 14) return BROWN;   // low base
+        return GREEN;                // ski era recovery
+      },
+      borderColor: 'transparent',
+      borderRadius: 2,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) { return ' ' + ctx.raw.toLocaleString() + ' residents'; }
+        }
+      },
+      annotation: {}
+    },
+    scales: {
+      x: {
+        grid: { color: FAINT },
+        ticks: { maxRotation: 45, font: { size: 11 } }
+      },
+      y: {
+        grid: { color: FAINT },
+        title: { display: true, text: 'Population', font: { size: 12 } },
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+/* ── SHEEP / WOOL CHART ── */
+new Chart(document.getElementById('sheepChart'), {
+  type: 'line',
+  data: {
+    labels: ['1810','1820','1830','1840','1850','1860','1870'],
+    datasets: [
+      {
+        label: 'Vermont Sheep (thousands)',
+        data: [100, 500, 1100, 1700, 600, 400, 320],
+        borderColor: BROWN,
+        backgroundColor: BROWN + '22',
+        fill: true,
+        tension: 0.3,
+        yAxisID: 'y1',
+        pointRadius: 5,
+        pointBackgroundColor: BROWN,
+      },
+      {
+        label: 'Wool Price (¢/lb)',
+        data: [30, 38, 45, 57, 25, 22, 20],
+        borderColor: RED,
+        backgroundColor: 'transparent',
+        fill: false,
+        tension: 0.3,
+        yAxisID: 'y2',
+        borderDash: [5,3],
+        pointRadius: 5,
+        pointBackgroundColor: RED,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: true,
+        labels: { boxWidth: 16, font: { size: 12 } }
+      }
+    },
+    scales: {
+      x: { grid: { color: FAINT } },
+      y1: {
+        type: 'linear',
+        position: 'left',
+        title: { display: true, text: 'Sheep (thousands)', font: { size: 11 } },
+        grid: { color: FAINT },
+        beginAtZero: true
+      },
+      y2: {
+        type: 'linear',
+        position: 'right',
+        title: { display: true, text: 'Wool Price (¢/lb)', font: { size: 11 } },
+        grid: { drawOnChartArea: false },
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+/* ── FOREST COVER CHART ── */
+new Chart(document.getElementById('forestChart'), {
+  type: 'line',
+  data: {
+    labels: ['1600','1700','1750','1800','1820','1840','1860','1880','1900','1920','1940','1960','1980','2000','2020'],
+    datasets: [{
+      label: 'Vermont Forest Cover (%)',
+      data: [99, 97, 95, 75, 55, 38, 30, 22, 30, 42, 55, 65, 72, 76, 78],
+      borderColor: GREEN,
+      backgroundColor: GREEN + '25',
+      fill: true,
+      tension: 0.4,
+      pointRadius: 4,
+      pointBackgroundColor: GREEN,
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: { label: function(ctx) { return ' ' + ctx.raw + '% forested'; } }
+      }
+    },
+    scales: {
+      x: { grid: { color: FAINT } },
+      y: {
+        title: { display: true, text: 'Forest Cover (%)', font: { size: 11 } },
+        grid: { color: FAINT },
+        min: 0, max: 100
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>

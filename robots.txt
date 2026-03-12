@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /links
 Disallow: /warren-public-buildings-report
+Disallow: /rice-mountain
