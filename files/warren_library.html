@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where Warren Does Its Business — A History of Public Space in a Small Vermont Town</title>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// Detect file:// and show banner; also fix image loading via JS fetch+blob on http://
+window.addEventListener('DOMContentLoaded', function() {
+  if (window.location.protocol === 'file:') {
+    var banner = document.getElementById('file-protocol-banner');
+    if (banner) banner.style.display = 'flex';
+    // Also try to load images via JS fetch — may work in some browsers with relaxed settings
+    // but mainly this just shows the banner
+  } else {
+    // Served via http:// — images should load normally, hide banner
+    var banner = document.getElementById('file-protocol-banner');
+    if (banner) banner.style.display = 'none';
+  }
+});
+</script>
+<style>
+:root {
+  --ink: #111108;
+  --paper: #f4f0e6;
+  --warm-white: #faf8f3;
+  --rust: #7d3012;
+  --forest: #2a4428;
+  --gold: #b07d0c;
+  --slate: #3d5a6e;
+  --muted: #6b6355;
+  --rule: #ccc4b0;
+  --pale: #e8e2d4;
+  --highlight: #f9f3e0;
+  --col-gap: 2.5rem;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Libre Baskerville', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.82;
+}
+
+/* ─── HEADER ─── */
+.header-rule {
+  background: var(--ink);
+  height: 5px;
+}
+.header-rule-thin {
+  background: var(--ink);
+  height: 1px;
+  margin-top: 3px;
+}
+.masthead {
+  background: var(--warm-white);
+  padding: 2.4rem 2rem 2rem;
+  text-align: center;
+  border-bottom: 3px double var(--ink);
+}
+.paper-name {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .68rem;
+  font-weight: 600;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.2rem;
+}
+.paper-name span { margin: 0 .5rem; color: var(--rule); }
+.masthead h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.8rem, 4.5vw, 3.1rem);
+  font-weight: 700;
+  line-height: 1.12;
+  max-width: 820px;
+  margin: 0 auto .9rem;
+}
+.deck {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .96rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--muted);
+  max-width: 620px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.65;
+}
+.dateline {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.dateline strong { color: var(--ink); }
+
+/* ─── NAV BAR ─── */
+.section-nav {
+  background: var(--ink);
+  padding: .65rem 1.5rem;
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.section-nav a {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .66rem;
+  font-weight: 600;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: rgba(244,240,230,.65);
+  text-decoration: none;
+  padding: .2rem .85rem;
+  border-right: 1px solid rgba(255,255,255,.12);
+  transition: color .2s;
+  white-space: nowrap;
+}
+.section-nav a:last-child { border-right: none; }
+.section-nav a:hover { color: #f9d870; }
+
+/* ─── BODY LAYOUT ─── */
+.article-body {
+  display: grid;
+  grid-template-columns: 1fr 290px;
+  max-width: 1060px;
+  margin: 0 auto;
+  gap: 0;
+}
+.main-col {
+  padding: 2.4rem 2.2rem 3rem 1.8rem;
+  border-right: 1px solid var(--rule);
+}
+.sidebar {
+  padding: 2rem 1.5rem;
+  background: var(--warm-white);
+}
+@media(max-width:720px){
+  .article-body { grid-template-columns: 1fr; }
+  .main-col { border-right: none; padding: 1.5rem; }
+  .sidebar { border-top: 2px solid var(--ink); padding: 1.5rem; }
+}
+
+/* ─── PROSE ─── */
+.section-hed {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: var(--rust);
+  margin: 2.8rem 0 .65rem;
+  padding-bottom: .3rem;
+  border-bottom: 2px solid var(--rust);
+}
+.section-hed:first-child { margin-top: 0; }
+.sub-hed {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 2rem 0 .5rem;
+}
+p { margin-bottom: 1.05rem; }
+
+.intro-drop::first-letter {
+  font-size: 4.2rem;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  float: left;
+  line-height: .8;
+  padding-right: .08em;
+  padding-top: .08em;
+  color: var(--rust);
+}
+
+/* ─── PULL QUOTE ─── */
+.pullquote {
+  margin: 2rem -1rem;
+  padding: 1.1rem 1.4rem;
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  background: var(--highlight);
+}
+.pullquote blockquote {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.18rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.pullquote cite {
+  display: block;
+  margin-top: .55rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .68rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-style: normal;
+}
+
+/* ─── DOCUMENT EXCERPT ─── */
+.doc-excerpt {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  border-left: 4px solid var(--slate);
+  padding: 1.1rem 1.4rem;
+  margin: 1.5rem 0;
+  font-size: .9rem;
+  line-height: 1.65;
+}
+.doc-excerpt .doc-label {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: .55rem;
+  display: block;
+}
+.doc-excerpt p { margin-bottom: 0; }
+
+/* ─── FACT BOX ─── */
+.fact-box {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 1.2rem 1.4rem;
+  margin: 1.8rem 0;
+}
+.fact-box .fact-hed {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: #f9d870;
+  margin-bottom: .8rem;
+}
+.fact-box ul { list-style: none; }
+.fact-box li {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .86rem;
+  line-height: 1.5;
+  padding: .3rem 0;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.fact-box li:last-child { border-bottom: none; }
+.fact-box li strong { color: #f9d870; }
+
+/* ─── PHOTO GALLERIES ─── */
+.photo-row {
+  display: grid;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.photo-row.two-up { grid-template-columns: 1fr 1fr; }
+.photo-row.three-up { grid-template-columns: 1fr 1fr 1fr; }
+.photo-row.one-wide { grid-template-columns: 1fr; }
+.photo-fig {
+  display: flex;
+  flex-direction: column;
+}
+.photo-fig img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 3px;
+  border: 1px solid var(--rule);
+  background: var(--pale);
+  display: block;
+}
+.photo-fig.tall img { height: 320px; }
+.photo-fig.short img { height: 160px; }
+.photo-cap {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .73rem;
+  color: var(--muted);
+  margin-top: .35rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+.photo-cap strong { font-style: normal; color: var(--ink); }
+.photo-placeholder {
+  width: 100%;
+  height: 220px;
+  background: var(--pale);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .8rem;
+  color: var(--muted);
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 600px) {
+  .photo-row.two-up, .photo-row.three-up { grid-template-columns: 1fr; }
+}
+
+
+.timeline {
+  position: relative;
+  margin: 2rem 0 2.5rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--rule);
+}
+.tl-entry {
+  position: relative;
+  padding-left: 2.4rem;
+  margin-bottom: 1.8rem;
+}
+.tl-dot {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: var(--warm-white);
+  border: 2.5px solid var(--rust);
+  z-index: 1;
+}
+.tl-dot.era-early { border-color: var(--forest); }
+.tl-dot.era-mid   { border-color: var(--rust); }
+.tl-dot.era-mod   { border-color: var(--slate); }
+.tl-dot.era-now   { border-color: var(--gold); background: var(--gold); }
+.tl-year {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .15rem;
+}
+.tl-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: .2rem;
+}
+.tl-body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .85rem;
+  line-height: 1.62;
+  color: #3a3530;
+}
+
+/* ─── BUILDING PROFILES ─── */
+.building-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  margin: 1.5rem 0;
+}
+@media(max-width:580px){ .building-grid { grid-template-columns:1fr; } }
+.building-card {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  padding: 1.1rem;
+}
+.building-card .bldg-name {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--slate);
+  margin-bottom: .4rem;
+}
+.building-card .bldg-title {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.building-card .bldg-body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .82rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.building-card .bldg-body strong { color: var(--ink); }
+
+/* ─── VILLAGE MAP (SVG) ─── */
+.map-container {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+.map-hed {
+  background: var(--ink);
+  color: var(--paper);
+  padding: .5rem 1rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.map-cap {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .73rem;
+  font-style: italic;
+  color: var(--muted);
+  padding: .55rem 1rem .8rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* ─── CHARTS ─── */
+.chart-panel {
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  margin: 1.5rem 0;
+}
+.chart-hed {
+  background: var(--forest);
+  color: var(--paper);
+  padding: .5rem 1rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .63rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+.chart-body { padding: 1.2rem; }
+.chart-cap {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .73rem;
+  font-style: italic;
+  color: var(--muted);
+  padding: .55rem 1rem .8rem;
+  border-top: 1px solid var(--rule);
+}
+
+/* ─── WARNING TEXT ─── */
+.warning-box {
+  background: var(--warm-white);
+  border: 2px solid var(--ink);
+  padding: 1.3rem 1.5rem;
+  margin: 1.8rem 0;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .9rem;
+}
+.warning-box .w-hed {
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .7rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.warning-box .w-hed::before,
+.warning-box .w-hed::after {
+  content: '★';
+  font-size: .7rem;
+  color: var(--muted);
+}
+.warning-box .article-list { list-style: none; }
+.warning-box .article-list li {
+  padding: .35rem 0;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.5;
+}
+.warning-box .article-list li:last-child { border-bottom: none; }
+.warning-box .article-list li strong {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+}
+.warning-box .article-list li.art4 {
+  background: #fdf7e0;
+  margin: 0 -1.5rem;
+  padding: .4rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+  border-top: 1px solid var(--rule);
+}
+
+/* ─── SIDEBAR ─── */
+.sb-hed {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: .35rem;
+  margin-bottom: .9rem;
+  margin-top: 1.8rem;
+}
+.sb-hed:first-child { margin-top: 0; }
+.sb-list { list-style: none; }
+.sb-list li {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .82rem;
+  padding: .3rem 0;
+  border-bottom: 1px solid var(--rule);
+  line-height: 1.45;
+}
+.sb-list li:last-child { border-bottom: none; }
+.sb-list li strong { font-weight: 700; }
+.sb-list li span { color: var(--muted); display: block; font-size: .76rem; }
+
+.sb-note {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .8rem;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: .8rem;
+  font-style: italic;
+}
+
+.sb-link-box {
+  background: var(--ink);
+  color: var(--paper);
+  padding: .9rem 1.1rem;
+  margin-top: 1.5rem;
+}
+.sb-link-box .sb-link-hed {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #f9d870;
+  margin-bottom: .6rem;
+}
+.sb-link-box a {
+  display: block;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .82rem;
+  color: rgba(244,240,230,.8);
+  text-decoration: underline;
+  margin-bottom: .35rem;
+  line-height: 1.4;
+}
+.sb-link-box a:hover { color: #f9d870; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--ink);
+  color: rgba(244,240,230,.5);
+  padding: 1.8rem 2rem;
+  text-align: center;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .75rem;
+  line-height: 1.7;
+  margin-top: 2rem;
+}
+footer strong { color: rgba(244,240,230,.85); }
+
+/* era legend */
+.era-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: 1rem 0 1.4rem;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: .77rem;
+}
+.era-badge {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+}
+.era-swatch {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  border: 2.5px solid;
+  flex-shrink: 0;
+}
+</style>
+</head>
+<body>
+<div id="file-banner" style="display:none;background:#c0392b;color:#fff;padding:.75rem 1.2rem;font-family:'Libre Franklin',sans-serif;font-size:.88rem;text-align:center;position:sticky;top:0;z-index:9999">
+  ⚠️ <strong>Photos won't load when opened directly in Chrome.</strong>
+  Run <code style="background:rgba(255,255,255,.2);padding:.1em .4em;border-radius:3px">python3 serve.py</code> (included) to view with images, or run <code style="background:rgba(255,255,255,.2);padding:.1em .4em;border-radius:3px">python3 download_images.py</code> to save them locally.
+  <button onclick="document.getElementById('file-banner').style.display='none'" style="margin-left:1rem;background:rgba(255,255,255,.25);border:none;color:#fff;padding:.2rem .6rem;border-radius:3px;cursor:pointer">✕ Dismiss</button>
+</div>
+<script>
+  if (location.protocol === 'file:') {
+    document.getElementById('file-banner').style.display = 'block';
+  }
+</script>
+
+
+<!-- Chrome file:// protocol warning banner -->
+<div id="file-protocol-banner" style="display:none;position:sticky;top:0;z-index:999;background:#7d3012;color:#fff;padding:.7rem 1.2rem;font-family:'Libre Franklin',sans-serif;font-size:.85rem;align-items:center;gap:1rem;flex-wrap:wrap;line-height:1.5">
+  <span>📷 <strong>Photos not showing?</strong> Chrome blocks local images for security. Fix in 30 seconds:</span>
+  <span style="background:rgba(255,255,255,.15);padding:.25rem .8rem;border-radius:3px;font-family:monospace;font-size:.82rem">Step 1: python3 download_images.py</span>
+  <span style="background:rgba(255,255,255,.15);padding:.25rem .8rem;border-radius:3px;font-family:monospace;font-size:.82rem">Step 2: python3 serve.py</span>
+  <span>then open <strong>localhost:8765</strong> in Chrome. Both scripts are in the same folder as this file.</span>
+  <button onclick="this.parentElement.style.display='none'" style="margin-left:auto;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;padding:.2rem .6rem;border-radius:3px;cursor:pointer;font-size:.8rem">✕</button>
+</div>
+
+
+<div class="header-rule"></div>
+<div class="header-rule-thin"></div>
+
+<header class="masthead">
+  <p class="paper-name">The Valley Reporter <span>|</span> Warren, Vermont <span>|</span> Community Reference</p>
+  <h1>Where Warren Does Its Business</h1>
+  <p class="deck">A history of public space, civic buildings, and community institutions in a small Vermont town — from the first freeman's meeting in 1798 to a town meeting vote in 2026</p>
+  <p class="dateline"><strong>Warren, Vermont</strong> — Research compiled March 2026</p>
+</header>
+
+<nav class="section-nav">
+  <a href="#townhall-note">Town Hall & Town Meeting</a>
+  <a href="#tmday">2026 Town Meeting</a>
+  <a href="#question">The Question</a>
+  <a href="#history">Facilities History</a>
+  <a href="#buildings">Buildings Today</a>
+  <a href="#context">Vermont Context</a>
+  <a href="#resources">Sources</a>
+</nav>
+
+<div class="article-body">
+<main class="main-col">
+
+<!-- ══════════════════════════════════════════
+     SECTION 0: TOWN HALL / TOWN MEETING — A NOTE ON NAMES
+══════════════════════════════════════════ -->
+<section id="townhall-note">
+<h2 class="section-hed">A Note on Names: "Town Hall," "Town Meeting," and What They Mean in Vermont</h2>
+
+<p class="intro-drop">Before following the history of Warren's public buildings, it's worth pausing on two phrases that get used loosely — including in this document — in ways that can obscure as much as they clarify: <em>town hall</em> and <em>town meeting</em>.</p>
+
+<p><strong>Town meeting</strong> is the event: Vermont's form of direct democracy, practiced since the Bennington meeting of 1762. It is the annual assembly at which legal voters of a town gather to vote on the budget, elect officers, and act on the warning articles. Vermont is one of the last places in the world where this kind of face-to-face, binding democratic assembly is the actual mechanism of government, not a consultative gathering or a formality. At a floor meeting, citizens speak for themselves, debate each article, and vote by voice or show of hands. No representatives, no intermediaries.</p>
+
+<p><strong>Town hall</strong>, in Vermont usage, has two distinct meanings that are easy to conflate. It can refer to a specific building that a town has built or designated to house civic functions — a dedicated structure for meetings, offices, elections, and community events. Warren built such a building in 1872, and it is still called the "Town Hall." But "town hall" also gets used generically to describe wherever the meeting is currently held — even when that's a school gymnasium. In Warren today, the floor vote of Town Meeting actually takes place at Warren Elementary School, not in the Town Hall building at 413 Main Street, because the school has the space to accommodate the crowd. The Town Hall building, for its part, now houses the library.</p>
+
+<p>This split — between the building called the Town Hall and the place where town meeting actually happens — is not unusual in Vermont. Small towns have always held their meetings wherever the largest available space was. <em>The earliest Warren town meetings were held in private homes.</em> Later they moved to the Red School House in East Warren, then to the Brick Schoolhouse in the Village, and only after 1872 to the dedicated Town Hall building. Even after the Town Hall was built, the select board's regular meetings have traditionally been held at the Municipal Building on Cemetery Road, not at the Town Hall. The two buildings serve different civic functions, though both carry civic weight.</p>
+
+<div class="fact-box">
+  <div class="fact-hed">Town Hall · Town Meeting · Municipal Building — Keeping Them Straight in Warren</div>
+  <ul class="sb-list" style="color:var(--paper)">
+    <li style="border-color:rgba(255,255,255,.15);font-family:'Libre Franklin',sans-serif;font-size:.84rem;padding:.35rem 0"><strong style="color:#f9d870">Town Hall (the building)</strong> — 413 Main Street. Built 1872. Now houses the library. Historic stage, sprung dance floor upstairs.</li>
+    <li style="border-color:rgba(255,255,255,.15);font-family:'Libre Franklin',sans-serif;font-size:.84rem;padding:.35rem 0"><strong style="color:#f9d870">Municipal Building</strong> — 42 Cemetery Road. Originally the 1829 Village Schoolhouse. Now houses Town Clerk, Town Administrator, Board of Listers. Select Board meets here.</li>
+    <li style="border-color:rgba(255,255,255,.15);font-family:'Libre Franklin',sans-serif;font-size:.84rem;padding:.35rem 0"><strong style="color:#f9d870">Town Meeting (the event)</strong> — Annual floor vote, first Tuesday in March, <em>held at Warren Elementary School</em>, not at the Town Hall building.</li>
+    <li style="border-color:rgba(255,255,255,.15);font-family:'Libre Franklin',sans-serif;font-size:.84rem;padding:.35rem 0"><strong style="color:#f9d870">Note</strong> — The town's own website currently describes the library as "next to" the Municipal Building — a description left over from before the 2009 move, or reflecting that the buildings are physically adjacent on Cemetery Road/Main Street.</li>
+  </ul>
+</div>
+
+<p>The naming confusion matters for understanding Article 4 of the 2026 warning. When voters were asked "Shall the Town vote to make the Town Hall the permanent home for the library?" — they were being asked about the building at 413 Main Street, not about where town meeting is held. The library has been there since 2009. The vote was about making that temporary arrangement permanent.</p>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1: 2026 TOWN MEETING
+══════════════════════════════════════════ -->
+<section id="tmday">
+<h2 class="section-hed">Town Meeting Day, March 3, 2026</h2>
+
+<p class="intro-drop">At 5:00 in the afternoon on Tuesday, March 3, 2026, Warren's legal voters gathered at Warren Elementary School on School Road — as they have every March for more than two centuries — to act on the town's annual warning. This year's agenda ran to eleven articles and included routine matters like the tax rate and the PTO allocation, along with a question that had been building for seventeen years.</p>
+
+<p>The meeting was recorded by MRVTV (Mad River Valley Television) and is publicly archived at mrvtv.com for anyone who wishes to watch the proceedings. Minutes are typically drafted and posted within several weeks by the Town Clerk at warrenvt.org.</p>
+
+<p>As is Warren's tradition, articles 1 through 9 were debated and voted from the floor by voice and hand. Australian ballot voting for elected officers ran from 7:00 AM to 7:00 PM at the same location.</p>
+
+<div class="doc-excerpt">
+  <span class="doc-label">Primary Source — Official Town Warning, February 11, 2026 (warrenvt.org)</span>
+  <p>"The residents of the Town of Warren who are legal voters in the town are hereby notified and warned to meet at the Warren Elementary School in the Town of Warren on Tuesday, March 3, 2026 at 5:00 PM in the afternoon to act upon the following matters..."</p>
+</div>
+
+<h3 class="sub-hed">The Full Warning, 2026</h3>
+<p>Below is the complete text of the 2026 Warren Town Meeting warning for municipal articles, transcribed directly from the official document filed February 11, 2026:</p>
+
+<div class="warning-box">
+  <div class="w-hed">Warning of the 2026 Town Meeting — Articles 1–11</div>
+  <ul class="article-list">
+    <li><strong>Article 1.</strong> Shall the Town vote a budget of $5,411,053 to meet the expenses and liabilities of the Town including the capital expenditures and to authorize the Select Board to set a tax rate sufficient to provide the same?</li>
+    <li><strong>Article 2.</strong> Shall the Town vote to allocate $30,000 to the Conservation Reserve Fund for the year 2026 to be used for land conservation projects as stated in the Town of Warren Conservation Commission and Reserve Fund Charter dated 24, April 2007.</li>
+    <li><strong>Article 3.</strong> Shall the Town of Warren vote to raise and expend the sum of $15,150 for the support of a project manager/implementation personnel for the VT Rt 100 active transportation corridor being pursued by the Mad River Path Association?</li>
+    <li class="art4"><strong>Article 4.</strong> <em>Shall the Town of Warren vote to make the Town Hall the permanent home for the library?</em> — <strong>[Voted from the floor]</strong></li>
+    <li><strong>Article 5.</strong> Shall the Town vote its current taxes into the hands of the Town Treasurer?</li>
+    <li><strong>Article 6.</strong> Shall the Town have its taxes of real and personal property billed July 15, taxes due August 17, delinquent after November 16, with no discount?</li>
+    <li><strong>Article 7.</strong> Shall the Town vote to raise and expend $25,000 to the Warren PTO?</li>
+    <li><strong>Article 8.</strong> Shall the Town empower the Select Board to accept any land if given to the Town or to purchase any land within the Town?</li>
+    <li><strong>Article 9.</strong> To set the date, time and place of the 2027 Town Meeting?</li>
+    <li><strong>Article 10.</strong> The following items will be voted on by Australian ballot between the hours of 7:00 AM and 7:00 PM, Tuesday, March 3, 2026: The Election of all Town officers by law.</li>
+    <li><strong>Article 11.</strong> To transact any other business that may come before the meeting.</li>
+  </ul>
+</div>
+
+<p>Article 4's wording — "make the Town Hall the permanent home for the library" — is an advisory question voted from the floor. It does not itself appropriate funds or mandate any action. What it provides is a clearer directive to the Select Board about where the library should be housed as both bodies plan for the future.</p>
+
+<p><strong>Article 4 passed.</strong> The full floor discussion is available in the MRVTV recording at <strong>mrvtv.com/1008801-2/</strong>. Official minutes will be posted by the Town Clerk at warrenvt.org. <em>The Valley Reporter</em>, the valley's paper of record, covered the meeting in its March 5, 2026 edition (subscription required).</p>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 1b: TOWN MEETING IN VERMONT
+══════════════════════════════════════════ -->
+<section id="vtmtg">
+<h2 class="section-hed">Town Meeting in Vermont: A Brief History</h2>
+
+<p class="intro-drop">To understand why Warren voted on Article 4 at Warren Elementary School — rather than, say, the Town Hall — it helps to know something about what "town meeting" actually means in Vermont. The terms get used loosely, and the confusion is understandable: "town hall" can mean a building, a meeting, a form of government, and a social tradition all at once.</p>
+
+<h3 class="sub-hed">The Event, Not the Building</h3>
+<p>In Vermont, <em>town meeting</em> is first and foremost an event — the annual exercise of direct democracy that has been practiced here since before there was a Vermont. <strong>The first town meeting in what became Vermont was held in Bennington in 1762, fifteen years before Vermont declared itself a republic.</strong> It took place not in any purpose-built town hall, but in the tavern and inn of one John Fassett. The first order of business was electing a town moderator. The first act of governance was voting to offer land and cash to anyone willing to build a gristmill.</p>
+
+<p>For most of Vermont's early history, towns held their annual meetings wherever space permitted: taverns, private homes, schoolhouses, churches. Warren's pattern was typical — private homes through 1812, the Red School House in East Warren through the 1820s, then the brick Village Schoolhouse from roughly 1829 to 1872. A dedicated town hall was a late development, not a founding one. Many towns built theirs in the second half of the 19th century, as populations grew and the need for a permanent civic space became clear.</p>
+
+<p>Vermont law still reflects this flexibility. Towns are required to hold an annual meeting on the first Tuesday in March, but the select board designates where. In Warren today, the floor meeting takes place at Warren Elementary School on School Road — not the building called Town Hall. The Town Hall (413 Main St) hosts the library, community events, and regular meetings, but the annual Town Meeting — the high civic event — moved to the school gymnasium when attendance outgrew the Main Street building.</p>
+
+<h3 class="sub-hed">Freeman's Meetings</h3>
+<p>The earliest Vermont town meetings were sometimes called <em>Freeman's Meetings</em> — gatherings of men who had taken the Freeman's Oath, swearing loyalty to Vermont and qualifying as legal voters. These were distinct from the ordinary annual meeting in their formality: to become a Freeman was to gain the right to vote in statewide elections, not just local ones. Warren's first Freeman's Meeting was held September 2, 1800. When the Town Hall opened in 1872, the Warren history records that "the Freeman's Meetings were formally dissolved as a category" — a signal that the old distinction between local and state franchise was giving way to a more unified civic identity.</p>
+
+<h3 class="sub-hed">What "Town Hall" Actually Means</h3>
+<p>The phrase "town hall" is doing three different jobs in any conversation about Warren:</p>
+<div class="doc-excerpt" style="margin:1.2rem 0;">
+  <span class="doc-label">Three Meanings in Common Use</span>
+  <p><strong>1. The building at 413 Main Street</strong> — Built 1872, currently housing the Warren Public Library, the community stage, and event space. This is what Warren residents mean when they say "the Town Hall." It is a specific historic structure within the NRHP Warren Village Historic District.</p>
+  <p style="margin-top:.7rem"><strong>2. The annual town meeting event</strong> — The floor meeting held each March (currently at Warren Elementary School) at which Warren's legal voters directly decide the town's business. When Article 4 asked whether to "make the Town Hall the permanent home for the library," this is the civic tradition the question was invoking — voters exercising their authority over a question about their own civic infrastructure.</p>
+  <p style="margin-top:.7rem"><strong>3. A generic term for local government</strong> — "Town hall meeting" in modern usage often means any public forum where officials take questions. Vermont's actual town meeting is something more binding and older than this: it is the legislature itself, not a consultation with it.</p>
+</div>
+
+<p>Article 4 sits at the intersection of all three meanings. The voters — exercising the town-meeting tradition of direct governance — voted on the fate of the building called Town Hall. The ambiguity in the phrase is not incidental; it reflects how deeply these meanings have grown together over two centuries.</p>
+
+<h3 class="sub-hed">A Note on the Basement</h3>
+<p>One question that comes up in any discussion of the Town Hall's renovation history is when the basement was added — or whether it was original. The 1872 construction records are not detailed in available public sources, and the 2007–2009 renovation documents have not been fully digitized. The NRHP nomination (1989, amended 2011) describes the building's architectural features but does not specify when the basement or lower level was constructed or modified. The Wiemann Lamphere Architects study of the Municipal Building (signed March 2, 2026) involves Matterport 3D scanning of existing conditions — a similar level of documentation for the Town Hall would likely answer the basement question definitively. <em>Anyone with access to the original construction drawings, town meeting minutes from 1872, or the 2007–2009 renovation specifications would have the clearest answer.</em></p>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 2: THE QUESTION
+══════════════════════════════════════════ -->
+<section id="question">
+<h2 class="section-hed">The Question Behind the Vote</h2>
+
+<p>Article 4 did not emerge from nowhere. It is the crystallized form of a conversation that Warren has been having — in town meeting halls, in Select Board minutes, in library trustees' reports — for the better part of two decades.</p>
+
+<p>In 2007, voters approved $200,000 for the renovation of the Town Hall (then sometimes called the Opera House) and simultaneously approved a planning process to identify a site for a permanent, standalone library building. Two years later, in 2009, the library completed a "temporary" move into the renovated Town Hall. The permanent building was never built — interrupted by the 2008 financial crisis, among other factors — and seventeen years later, the library remains in what was always called a temporary arrangement.</p>
+
+<div class="pullquote">
+  <blockquote>"The community built the shelving by hand — all made by Vermont woodworkers — and moved the collection book by book in a bucket brigade."</blockquote>
+  <cite>Warren Library history, describing the 2009 move to Town Hall</cite>
+</div>
+
+<p>Over those seventeen years, the library has grown into the space. The stage, one of the Town Hall's original architectural features, was preserved as the children's reading area. The building fund — accumulating at roughly $5,000 per year — has grown to a balance of approximately $82,503. But the governance relationship between the town and the library has not always been smooth. Vermont law (22 V.S.A. § 143, strengthened by Act 150 of 2024) grants library trustees independent authority over their budget, their staff, and their operations — a structural tension with any select board that also holds authority over the building in which the library operates.</p>
+
+<h3 class="sub-hed">What Changed in 2025–2026</h3>
+<p>Immediately before the March 3 vote, another development adds context: on March 2, 2026 — one day before town meeting — the Select Board signed a $6,000 contract with Wiemann Lamphere Architects for space planning work at the Municipal Building at 42 Cemetery Road. The scope covers a study of how staff might be reorganized within the existing building. The contract document appeared in the March 10, 2026 Select Board packet. Whatever voters decided about the library in Article 4, the town was already beginning to think carefully about its other facility.</p>
+
+<div class="chart-panel">
+  <div class="chart-hed">Town Budget vs. Library Building Fund — 2026</div>
+  <div class="chart-body"><canvas id="budgetChart" height="90"></canvas></div>
+  <p class="chart-cap">The Library Building Improvement Fund — established to accumulate toward a permanent library structure — holds approximately $82,503, or 1.5% of the total town budget of $5,411,053. It adds roughly $5,000 per year. Sources: 2026 Town Warning; Warren Town Report 2025.</p>
+</div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 3: HISTORY OF FACILITIES
+══════════════════════════════════════════ -->
+<section id="history">
+<h2 class="section-hed">A History of Warren's Public Buildings</h2>
+
+<p>To understand why Warren is debating where to put its library, it helps to understand where every previous generation put its civic institutions — and how those choices have rippled forward across 225 years.</p>
+
+<!-- Sense-of-place photo: covered bridge and Main Street -->
+<div class="photo-row two-up" style="margin:1rem 0 1.5rem">
+  <figure class="photo-fig">
+    <img src="images/warren_covered_bridge.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
+      alt="Warren Village Covered Bridge"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+    <div class="photo-placeholder" style="display:none">📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small></div>
+    <figcaption class="photo-cap"><strong>Warren Village Covered Bridge</strong> — The covered bridge over the Mad River has been a landmark of the village center since the 19th century. Route 100 crosses the river here, just west of Main Street. Photo: Wikimedia Commons.</figcaption>
+  </figure>
+  <figure class="photo-fig">
+    <img src="images/warren_main_street_north.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
+      alt="Main Street, Warren VT, looking north"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+    <div class="photo-placeholder" style="display:none">📷 Main Street Looking North<br><small>Warren VT · Wikimedia Commons</small></div>
+    <figcaption class="photo-cap"><strong>Main Street, Warren Village, looking north</strong> — The Town Hall is on Main Street; Cemetery Road branches north past the fire station toward the Municipal Building. Photo: Wikimedia Commons.</figcaption>
+  </figure>
+</div>
+
+<h3 class="sub-hed">The Era Legend</h3>
+<div class="era-legend">
+  <div class="era-badge"><div class="era-swatch" style="border-color:var(--forest)"></div> Early Settlement (1797–1840)</div>
+  <div class="era-badge"><div class="era-swatch" style="border-color:var(--rust)"></div> Village Formation (1840–1900)</div>
+  <div class="era-badge"><div class="era-swatch" style="border-color:var(--slate)"></div> Institutional Period (1900–1970)</div>
+  <div class="era-badge"><div class="era-swatch" style="border-color:var(--gold); background:var(--gold)"></div> Modern Era (1970–present)</div>
+</div>
+
+<div class="timeline">
+
+  <div class="tl-entry">
+    <div class="tl-dot era-early"></div>
+    <div class="tl-year">September 20, 1798</div>
+    <div class="tl-title">First Town Meeting — Private Homes</div>
+    <div class="tl-body">The first town meeting is held. Samuel Lard is elected the first town clerk. Selectmen include Ruel Sherman, Joseph Raymond, and Seth Leavitt. <em>Location: private homes of the selectmen</em>, which remain the venue for official meetings through 1812.</div>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-early"></div>
+    <div class="tl-year">c. 1800 — 1812</div>
+    <div class="tl-title">Freeman's Meetings at Private Homes</div>
+    <div class="tl-body">The first Freeman's Meeting is held September 2, 1800, with twelve men taking the Freeman's Oath. The town's business continues to be conducted at the homes of selectmen — a common practice in early Vermont towns before purpose-built civic structures existed. The geographic center of activity was <em>East Warren</em>, where the best farmland lay and where the earliest settlement had taken hold.</div>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-early"></div>
+    <div class="tl-year">1812 — c. 1830</div>
+    <div class="tl-title">Red School House, East Warren</div>
+    <div class="tl-body">For eighteen years, Freeman's Meetings move to the Red School House, located in East Warren — then still the commercial heart of the town. The Red School House stood near the Four Corners at Roxbury Mountain Road, where the first district schoolhouse had been built "before 1805." East Warren had the best farmland and larger farms; it remained the center of business from settlement until the 1820s. As mills and dams multiplied along the Mad River, the population shifted westward toward the Village, and the Red School House era came to an end. The building itself is not known to survive. <em>Today the East Warren Community Market occupies a building near the old Four Corners crossroads.</em></div>
+  </div>
+
+  <!-- Photo: East Warren farming era + note about Red School House -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:500px">
+    <figure class="photo-fig">
+      <img src="images/warren_sibley_house_1967.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sibley_House_1967.jpg/600px-Sibley_House_1967.jpg"
+        alt="Sibley House, East Warren, 1967 — typical of the farmhouses where early town meetings were held"
+        style="height:220px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:220px">📷 Sibley House, East Warren, 1967<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Sibley House, East Warren, 1967</strong> — A farmstead typical of the East Warren that hosted Warren's earliest civic life. The Red School House stood in this same neighborhood, near the Roxbury Mountain Road crossroads. East Warren was the town's center until the 1820s, when the mill economy shifted gravity toward Warren Village. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-early"></div>
+    <div class="tl-year">1823 (organized) / 1829 (built)</div>
+    <div class="tl-title">Village School House (Brick) — South Side of the Common</div>
+    <div class="tl-body">The Village School is organized in 1823 and built in brick in 1829 on the south side of the Village Common — a location chosen deliberately, at the symbolic center of the new village plan (the Common and cemetery were laid out just three years earlier, in 1826). After 1840, Freeman's Meetings shift entirely to the Village, and the brick schoolhouse carries dual duty as both school and town hall for more than three decades. <em>Around 1867, the original brick building was demolished and replaced on the same site by the frame structure that still stands today — now the Municipal Building at 42 Cemetery Road.</em> This replacement-in-place explains why the same parcel served Warren continuously from 1829 to the present, and why the current building is described in historic records as "the frame building still extant" succeeding the brick original.</div>
+  </div>
+
+  <!-- Building lineage note for the Brick Schoolhouse -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:500px;background:var(--pale);border-left:3px solid var(--forest);padding:.8rem 1rem;font-family:'Libre Franklin',sans-serif;font-size:.84rem;border-radius:0 4px 4px 0">
+    <div style="font-weight:700;color:var(--forest);margin-bottom:.35rem;font-size:.88rem">📐 The Brick Schoolhouse → Municipal Building Lineage</div>
+    <div style="color:var(--ink);line-height:1.5">
+      The original <strong>1829 brick schoolhouse</strong> was Warren's civic center for four decades. Around <strong>1867</strong>, the brick was replaced by a wood-frame building on the same 42 Cemetery Road site. That frame building was <strong>remodeled in 1952</strong> (third room added, well drilled, heating plant) and is the structure that stands today as the <strong>Municipal Building</strong> — housing the Town Clerk, Town Administrator, and Board of Listers. The library occupied it 1974–2009, making the Municipal Building the direct successor to the Brick Schoolhouse as Warren's primary civic facility for more than 180 years.
+    </div>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mid"></div>
+    <div class="tl-year">1838–1839</div>
+    <div class="tl-title">Warren River Meeting House (Church)</div>
+    <div class="tl-body">The church/meetinghouse is built by the Free Will Baptists, Universalists, Congregationalists, and Methodists jointly. Large public assemblies increasingly have a dedicated civic-religious space, reducing the schoolhouse's role as the primary gathering point. For decades, church ladies serve meals at the noon recess of Town Meeting.</div>
+  </div>
+
+  <!-- Photo: the 1838 church -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:420px">
+    <figure class="photo-fig">
+      <img src="images/warren_church.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
+        alt="Warren Church, 1838 meetinghouse, Warren Vermont"
+        style="height:200px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Church (1838–39)<br><small>Wikimedia Commons · CC BY-SA</small></div>
+      <figcaption class="photo-cap"><strong>Warren Church / Meetinghouse, 1838–39</strong> — Built jointly by four denominations. For decades the town's primary gathering space for civic and religious life alike. The 1872 Town Hall stands adjacent. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mid"></div>
+    <div class="tl-year">c. 1840 — 1872</div>
+    <div class="tl-title">Brick Schoolhouse — All Town Meetings Held Here</div>
+    <div class="tl-body">After 1840, Warren holds all Freeman's Meetings in the Village, first at the brick schoolhouse, then — after the ~1867 rebuild — at the new frame building. The mill economy is near its peak (by 1870 there are as many as nine mills along the Mad River), and by the late 1860s the schoolhouse, however recently rebuilt, is still straining under dual educational and civic demands. By 1872 it is clear a dedicated town hall is needed.</div>
+  </div>
+
+  <!-- Photo: Mad River / covered bridge - the setting of this mill economy era -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:520px">
+    <figure class="photo-fig">
+      <img src="images/warren_covered_bridge.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
+        alt="Warren Village Covered Bridge over the Mad River"
+        style="height:200px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Warren Village Covered Bridge</strong> — The Mad River powered up to nine mills in the 1870s, making Warren's mill economy the most developed in the valley. The covered bridge spans the river at the heart of the village. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mid"></div>
+    <div class="tl-year">1872</div>
+    <div class="tl-title">Warren Town Hall — 413 Main Street</div>
+    <div class="tl-body">"By 1872, the population had grown so that neither the school nor the larger homes could accommodate the meetings, and it was voted to build a town hall." The land — just enough for the building — was donated by Ed Cardell. At the first meeting in the new building, the Freeman's Meetings were formally dissolved as a category. The building features a sprung dance floor on the upper level and a stage. <strong>A basement was added sometime in the 1950s.</strong> The 2007–2009 renovation adapted the building for library use. Town meetings were formally held here from 1872; today, the annual floor vote has moved to Warren Elementary School while the Town Hall building itself houses the library.</div>
+  </div>
+
+  <!-- Photo pullout: Church and Town Hall -->
+  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:540px">
+    <figure class="photo-fig short">
+      <img src="images/warren_church.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
+        alt="Warren Church, the 1838 meetinghouse"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="photo-placeholder" style="display:none;height:160px">📷 Warren Church<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>The 1838 Meetinghouse</strong> — civic and religious center before the Town Hall. The Town Hall (1872) stands adjacent to the same site.</figcaption>
+    </figure>
+    <figure class="photo-fig short">
+      <img src="images/warren_town_hall_2008.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
+        alt="Warren Town Hall, 2008"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <div class="photo-placeholder" style="display:none;height:160px">📷 Town Hall · 2008<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Town Hall, 413 Main St</strong> — Photographed in 2008, the year before the library moved in. The library has occupied the space since 2009.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mid"></div>
+
+  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
+        <figure class="photo-fig">
+      <img src="images/warren_covered_bridge.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
+        alt="Warren Village Covered Bridge"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small></div>
+    </figure>
+        <figure class="photo-fig">
+      <img src="images/warren_bridge_2.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/WarrenBridge.JPG/800px-WarrenBridge.JPG"
+        alt="Warren Covered Bridge, alternate view"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Covered Bridge, alternate view<br><small>Wikimedia Commons</small></div>
+    </figure>
+  </div>
+  <p style="font-size:.8rem;color:#888;font-style:italic;margin:-.8rem 0 1rem 2rem;font-family:'Libre Franklin',sans-serif">
+    The Warren Village Covered Bridge over the Mad River — washed out in the catastrophic 1927 flood and later restored with a Vermont Legislature grant. Truck traffic is prohibited to preserve it. Photos: Wikimedia Commons.
+  </p>
+    <div class="tl-year">1900</div>
+    <div class="tl-title">Warren Public Library — Founded by Town Meeting Vote</div>
+    <div class="tl-body">The library is established by a vote of Town Meeting, beginning a formal collection. Its early decades are spent in various arrangements — the record notes that when it eventually moved to the Municipal Building in 1974, it had grown to 1,000 catalogued books. The specific location of the library in its earliest decades (1900–1974) is not clearly documented in available sources; the 1974 move to the Municipal Building is the first clearly recorded permanent home.</div>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mod"></div>
+    <div class="tl-year">1947</div>
+    <div class="tl-title">Warren Volunteer Fire Department — North End of Village</div>
+    <div class="tl-body">The volunteer fire department is organized under the leadership of Clayton Neill, its first chief, in 1947. Its first quarters are at the north end of the Village. The present fire station — built into the bank at the entrance of the Common — comes later; an addition was dedicated October 23, 1977, in honor of John Snow, who served as fire chief for twenty-two years.</div>
+  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
+        <figure class="photo-fig">
+      <img src="images/warren_main_street_north.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
+        alt="Main Street, Warren Village, looking north"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Main Street, Warren Village, looking north<br><small>Wikimedia Commons</small></div>
+    </figure>
+        <figure class="photo-fig">
+      <img src="images/warren_bridge_2.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/WarrenBridge.JPG/800px-WarrenBridge.JPG"
+        alt="Warren Covered Bridge, alternate view"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Covered Bridge, alternate view<br><small>Wikimedia Commons</small></div>
+    </figure>
+  </div>
+  <p style="font-size:.8rem;color:#888;font-style:italic;margin:-.8rem 0 1rem 2rem;font-family:'Libre Franklin',sans-serif">
+    <strong style="color:#aaa">Left:</strong> Main Street looking north through Warren Village — fire station at the entrance to the Common, Town Hall on Main Street. <strong style="color:#aaa">Right:</strong> The Warren Covered Bridge, which the volunteer fire department helped protect after the 1927 flood restoration. Photos: Wikimedia Commons.
+  </p>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mod"></div>
+    <div class="tl-year">1952</div>
+    <div class="tl-title">Village School House Remodeled — 42 Cemetery Road</div>
+    <div class="tl-body">The original brick Village Schoolhouse (built 1829, rebuilt in frame c. 1867) is significantly remodeled: a third room is added, a well is drilled, and a heating plant is installed. By 1960, it is the only school still operating in Warren. The growth of the recreation industry soon renders even this school too small, prompting the construction of Warren Elementary School on the Brooks Field Recreation Area. The old school building transitions to administrative uses.</div>
+  </div>
+
+  <!-- Photo: Hickox House illustrates the Historic District village context in which the schoolhouse sat -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:460px">
+    <figure class="photo-fig">
+      <img src="images/warren_hickox_house.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Warren_Hickox_House.JPG/800px-Warren_Hickox_House.JPG"
+        alt="Warren Hickox House, Warren Village Historic District"
+        style="height:200px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Hickox House<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Warren Hickox House, Warren Village Historic District</strong> — One of the historic structures within the same NRHP-listed district as the Municipal Building (the former schoolhouse) and the Town Hall. The 1952 remodel of the schoolhouse took place within this intact 19th-century village fabric. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mod"></div>
+    <div class="tl-year">1974</div>
+    <div class="tl-title">Library Moves to Municipal Building — 42 Cemetery Road</div>
+    <div class="tl-body">"The Village School was turned into offices for public officials and space for the library which had been started in 1900. The move to the Municipal Building (formerly the Village School House) took place in 1974." With 1,000 books catalogued by librarian Lois Kaufmann and volunteers, the library finds its first formal permanent home inside what is now called the Municipal Building — the same building that houses the Town Clerk and other offices to this day. This is the first time the library and town offices explicitly share a building.</div>
+  </div>
+
+  <!-- Photo: Main Street looking north — the civic campus in context -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:480px">
+    <figure class="photo-fig">
+      <img src="images/warren_main_street_north.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
+        alt="Main Street, looking north, Warren VT"
+        style="height:190px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:190px">📷 Main Street, Warren VT<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Main Street, Warren Village, looking north</strong> — The Town Hall (built 1872) is on Main Street; Cemetery Road branches toward the Municipal Building (the 1829/1867 schoolhouse), where the library lived 1974–2009. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mod"></div>
+    <div class="tl-year">2007</div>
+    <div class="tl-title">Town Meeting Votes $200K for Town Hall Renovation — and a New Library</div>
+    <div class="tl-body">Voters approve a $200,000 renovation of the Town Hall at 413 Main Street and simultaneously approve a community planning process to identify a site for a standalone permanent library building. The intent is explicitly for the library to eventually have its own facility. The Town Hall renovation proceeds.</div>
+  </div>
+  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
+        <figure class="photo-fig">
+      <img src="images/warren_hickox_house.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Warren_Hickox_House.JPG/800px-Warren_Hickox_House.JPG"
+        alt="Warren Hickox House, Warren Village Historic District (NRHP)"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Hickox House, Warren Village Historic District (NRHP)<br><small>Wikimedia Commons</small></div>
+    </figure>
+        <figure class="photo-fig">
+      <img src="images/warren_church.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
+        alt="Warren Church, 1838 meetinghouse"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Church, 1838 meetinghouse<br><small>Wikimedia Commons</small></div>
+    </figure>
+  </div>
+  <p style="font-size:.8rem;color:#888;font-style:italic;margin:-.8rem 0 1rem 2rem;font-family:'Libre Franklin',sans-serif">
+    Both civic buildings sit within the Warren Village Historic District (NRHP, 1992, amended 2011). <strong style="color:#aaa">Left:</strong> The Hickox House, a Greek Revival structure in the district. <strong style="color:#aaa">Right:</strong> The 1838 meetinghouse, adjacent to the 1872 Town Hall. Photos: Wikimedia Commons.
+  </p>
+
+  <!-- Photo: Town Hall exterior — as renovated, just before library moved in -->
+  <div style="margin:.6rem 0 1.2rem 2rem;max-width:480px">
+    <figure class="photo-fig">
+      <img src="images/warren_town_hall_2008.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
+        alt="Warren Town Hall, 413 Main Street, 2008"
+        style="height:200px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Town Hall, 2008<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Warren Town Hall, 413 Main Street, 2008</strong> — Photographed after the $200K renovation, the year before the library moved in. Built 1872; renovated 2007–2009. The building now holds the library permanently. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-dot era-mod"></div>
+    <div class="tl-year">2009</div>
+    <div class="tl-title">Library Moves (Temporarily) to Town Hall — 413 Main Street</div>
+    <div class="tl-body">Following the Town Hall renovation, the library relocates from the Municipal Building to the renovated Town Hall. Vermont woodworkers build all shelving. The community moves the collection in a "bucket brigade." The historic stage is preserved as the children's area. The move is explicitly described as temporary. The permanent building is never constructed — the 2008 financial crisis is among the factors that halt planning — and the library remains in the Town Hall to the present.</div>
+  </div>
+
+  <!-- 2009: Town Hall exterior + Library interior -->
+  <div class="photo-row two-up" style="margin:.8rem 0 1.4rem 2rem;max-width:560px">
+    <figure class="photo-fig">
+      <img src="images/warren_town_hall_2008.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
+        alt="Warren Town Hall exterior, 2008 — the year before the library moved in"
+        style="height:200px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:200px">📷 Town Hall exterior, 2008<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Town Hall, 413 Main St, 2008</strong> — photographed the year before the library moved in. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+    <figure class="photo-fig">
+      <img src="images/warren_library_interior_2018.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Second_floor_of_Warren_Public_Library%2C_August_2018.JPG/800px-Second_floor_of_Warren_Public_Library%2C_August_2018.JPG"
+        alt="Second floor of Warren Public Library, August 2018"
+        style="height:200px"
+        loading="lazy"
+        onerror="this.closest('figure').querySelector('.photo-placeholder').style.display='flex';this.style.display='none'" />
+      <div class="photo-placeholder" style="display:none;height:200px">📷 Warren Library interior, 2018<br><small>Wikimedia Commons</small></div>
+      <figcaption class="photo-cap"><strong>Library interior, second floor, 2018</strong> — nine years into its "temporary" home. Hand-built Vermont woodworker shelving visible. Photo: Wikimedia Commons.</figcaption>
+    </figure>
+  </div>
+
+  <div class="tl-entry">
+    <div class="tl-year">2026</div>
+    <div class="tl-title">Article 4 Passes: Town Hall Voted the Permanent Home for the Library</div>
+    <div class="tl-body">Seventeen years after the "temporary" move, Warren voters settle the question: the Town Hall is the library's permanent home. The measure passes from the floor on March 3. The prior day the Select Board had signed a $6,000 contract with Wiemann Lamphere Architects for space planning at the Municipal Building — the former Village Schoolhouse where the library lived 1974–2009. Both conversations continue in parallel. Full meeting recorded by MRVTV at mrvtv.com/1008801-2/</div>
+  </div>
+
+</div><!-- /timeline -->
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 4: BUILDINGS TODAY
+══════════════════════════════════════════ -->
+<section id="buildings">
+<h2 class="section-hed">Warren's Current Civic Buildings</h2>
+
+<p>Warren currently operates three primary civic facilities, all within a few hundred feet of each other in the Village center. A fourth — the fire station — is also nearby. All appear within the Warren Village Historic District, listed on the National Register of Historic Places in 1992.</p>
+
+<!-- Village map - real OSM embed with overlay -->
+<div class="map-container">
+  <div class="map-hed">Warren Village Civic Campus — Today</div>
+  <div style="position:relative;width:100%;padding-bottom:60%;background:#ddd;border-radius:4px;overflow:hidden;border:1px solid var(--rule)">
+    <iframe
+      src="https://www.openstreetmap.org/export/embed.html?bbox=-72.8590%2C44.1095%2C44.1160%2C-72.8510&amp;layer=mapnik&amp;bbox=-72.8590%2C44.1095%2C-72.8510%2C44.1160&amp;marker=44.1127%2C-72.8557"
+      style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+      allowfullscreen=""
+      loading="lazy"
+      title="Warren Village map"></iframe>
+  </div>
+  <p class="map-cap">Live map of Warren Village. The Town Hall / Library (413 Main St) is at center; the Municipal Building is a short walk up Cemetery Road to the north; Warren Elementary School is on School Road, northeast of the village center. <a href="https://www.openstreetmap.org/#map=17/44.1127/-72.8557" target="_blank" style="color:var(--slate)">Open larger map ↗</a></p>
+</div>
+
+<!-- Annotated civic buildings legend -->
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0 1.5rem">
+  <div style="background:var(--warm-white);border:1px solid var(--rule);border-radius:4px;padding:.85rem;font-family:'Libre Franklin',sans-serif;font-size:.82rem">
+    <div style="font-weight:700;color:var(--rust);margin-bottom:.3rem;font-size:.9rem">🔴 Town Hall / Library</div>
+    <div style="color:var(--muted)">413 Main Street · Built 1872</div>
+    <div style="margin-top:.3rem">Library in residence since 2009 (now permanent). Historic stage = children's section. Sprung dance floor upstairs.</div>
+  </div>
+  <div style="background:var(--warm-white);border:1px solid var(--rule);border-radius:4px;padding:.85rem;font-family:'Libre Franklin',sans-serif;font-size:.82rem">
+    <div style="font-weight:700;color:var(--forest);margin-bottom:.3rem;font-size:.9rem">🟢 Municipal Building</div>
+    <div style="color:var(--muted)">42 Cemetery Road · Est. 1823/1829</div>
+    <div style="margin-top:.3rem">Town Clerk, Town Admin, Board of Listers. Originally the Village Schoolhouse. Library lived here 1974–2009.</div>
+  </div>
+  <div style="background:var(--warm-white);border:1px solid var(--rule);border-radius:4px;padding:.85rem;font-family:'Libre Franklin',sans-serif;font-size:.82rem">
+    <div style="font-weight:700;color:var(--slate);margin-bottom:.3rem;font-size:.9rem">🔵 Warren Elementary School</div>
+    <div style="color:var(--muted)">293 School Road</div>
+    <div style="margin-top:.3rem">Where Town Meeting actually happens. Floor vote at 5 PM; Australian ballot 7 AM–7 PM on March 4.</div>
+  </div>
+  <div style="background:var(--warm-white);border:1px solid var(--rule);border-radius:4px;padding:.85rem;font-family:'Libre Franklin',sans-serif;font-size:.82rem">
+    <div style="font-weight:700;color:var(--gold);margin-bottom:.3rem;font-size:.9rem">📍 Walking Distances</div>
+    <div style="color:var(--muted)">All within ~¼ mile</div>
+    <div style="margin-top:.3rem">Town Hall → Municipal Building: ~2 min walk. Municipal Building → Elementary: ~8 min walk.</div>
+  </div>
+</div>
+
+<!-- Historic Map -->
+<div class="map-container" style="margin-top:1.5rem">
+  <div class="map-hed">Warren Village, 1858 — Walling's Map of Washington County</div>
+  <div style="position:relative;background:var(--pale);border:1px solid var(--rule);border-radius:4px;padding:.5rem;text-align:center">
+    <img
+      src="https://tile.loc.gov/image-services/iiif/service:gmd:gmd375:g3753:g3753w:la001191/full/pct:50/0/default.jpg"
+      alt="1858 Walling Map of Washington County, Vermont — full map includes Warren Village inset"
+      style="width:100%;max-height:280px;object-fit:contain;border-radius:2px"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='block'"
+    />
+    <div style="display:none;padding:2rem;font-family:'Libre Franklin',sans-serif;font-size:.85rem;color:var(--muted)">
+      <strong>H.F. Walling, Map of Washington County, Vermont, 1858</strong><br>
+      <em>Includes a Warren Village inset showing structures and landowners as of 1858 — fourteen years before the Town Hall was built.</em><br><br>
+      Available free at the Library of Congress:<br>
+      <a href="https://www.loc.gov/item/2012586238/" target="_blank" style="color:var(--slate)">loc.gov/item/2012586238</a>
+    </div>
+  </div>
+  <p class="map-cap">H.F. Walling, <em>Map of Washington County, Vermont</em> (Baker &amp; Tilden, New York, 1858). This cadastral map shows Warren Village fourteen years before the Town Hall was built — at a moment when the Brick Schoolhouse on the Common was still the primary civic building. The map includes a Warren Village inset with individual landowners' names. Free to use: Library of Congress Geography and Map Division, public domain. <a href="https://www.loc.gov/item/2012586238/" target="_blank" style="color:var(--slate)">View at loc.gov ↗</a></p>
+</div>
+
+
+<div class="building-grid">
+  <div class="building-card">
+    <div class="bldg-name">Current Library Location</div>
+    <div class="bldg-title">Town Hall / Library</div>
+    <div class="bldg-body">
+      <strong>413 Main Street</strong> — Built 1872, land donated by Ed Cardell. Upper floor features a sprung dance floor; lower level was renovated 2007–2009 for library use. Library moved in 2009. Children's area occupies the historic stage. Collection: ~8,526 volumes, 13,669 annual circulations. <strong>Library Building Fund: ~$82,503.</strong> The Historic District nomination (1992) identifies this as a key contributing building.
+    </div>
+  </div>
+  <div class="building-card">
+    <div class="bldg-name">Town Offices / Clerk / Historical Society</div>
+    <div class="bldg-title">Municipal Building</div>
+    <div class="bldg-body">
+      <strong>42 Cemetery Road</strong> — Originally the Village Schoolhouse. School organized 1823, brick building 1829, remodeled 1952 (3rd room, well, heating). Became town offices 1974 when Warren Elementary opened. Houses: Town Clerk, Town Administrator, Board of Listers, Historical Society meetings (3rd Thursday). As of March 2026, subject of a $6,000 Wiemann Lamphere Architects space-planning study.
+    </div>
+  </div>
+  <div class="building-card">
+    <div class="bldg-name">Annual Town Meeting Venue</div>
+    <div class="bldg-title">Warren Elementary School</div>
+    <div class="bldg-body">
+      <strong>293 School Road</strong> — Built to accommodate enrollment growth from the Sugarbush-era recreation boom. Town meetings have been held here since the school opened. Australian ballot voting runs 7 AM–7 PM; floor voting typically begins at 5 PM. Polling location for all local and state elections.
+    </div>
+  </div>
+  <div class="building-card">
+    <div class="bldg-name">Public Safety</div>
+    <div class="bldg-title">Fire Station + Village Green Pavilion</div>
+    <div class="bldg-body">
+      <strong>Fire Station:</strong> organized 1947, present station built into the bank at the entrance to the Common. Addition dedicated 1977. Remains an all-volunteer force. <strong>Pavilion (2025):</strong> New structure on the Village Green, funded by a $40,000 ACCD Better Places Program matching grant secured by Library Director Marie Schmukal and Town Treasurer Dayna Lisaius.
+    </div>
+  </div>
+</div>
+
+<!-- Photo gallery: Warren Village buildings -->
+<h3 class="sub-hed" style="margin-top:2rem">The Buildings in Photos</h3>
+
+<div class="photo-row two-up">
+  <figure class="photo-fig">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/2008_library_Warren_Vermont_2611591841.jpg/800px-2008_library_Warren_Vermont_2611591841.jpg"
+      alt="Warren Public Library (in Town Hall), Warren Vermont, 2008"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+    />
+    <div class="photo-placeholder" style="display:none">
+      📷 Warren Town Hall / Library<br><small>Photo available at Wikimedia Commons</small>
+    </div>
+    <figcaption class="photo-cap"><strong>Town Hall / Library, 413 Main Street</strong> — The building as it appeared in 2008, shortly before the library's arrival. Built 1872, land donated by Ed Cardell. The library moved in the following year. Photo: Wikimedia Commons, public domain.</figcaption>
+  </figure>
+  <figure class="photo-fig">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg/800px-Main_Street%2C_Looking_North%2C_Warren%2C_VT.jpg"
+      alt="Main Street, Looking North, Warren VT"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+    />
+    <div class="photo-placeholder" style="display:none">
+      📷 Main Street, Looking North<br><small>Warren VT — Wikimedia Commons</small>
+    </div>
+    <figcaption class="photo-cap"><strong>Main Street, looking north</strong> — The Village center corridor. The Town Hall is on Main Street; Cemetery Road branches north toward the Municipal Building just out of frame. Photo: Wikimedia Commons.</figcaption>
+  </figure>
+</div>
+
+<div class="photo-row three-up">
+  <figure class="photo-fig short">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Warren_Church%2C_Warren%2C_Vermont.jpg/800px-Warren_Church%2C_Warren%2C_Vermont.jpg"
+      alt="Warren Church (the 1838 meetinghouse)"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+    />
+    <div class="photo-placeholder" style="display:none" style="height:160px">
+      📷 Warren Church / Meetinghouse<br><small>1838–39 · Wikimedia Commons</small>
+    </div>
+    <figcaption class="photo-cap"><strong>The 1838 Meetinghouse</strong> — Built jointly by Baptists, Universalists, Methodists, and Congregationalists. The Town Hall was added to the same site in 1872. Photo: Wikimedia Commons.</figcaption>
+  </figure>
+  <figure class="photo-fig short">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/WARREN_VILLAGE_COVERED_BRIDGE.jpg/800px-WARREN_VILLAGE_COVERED_BRIDGE.jpg"
+      alt="Warren Village Covered Bridge over the Mad River"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+    />
+    <div class="photo-placeholder" style="display:none" style="height:160px">
+      📷 Warren Village Covered Bridge<br><small>Wikimedia Commons</small>
+    </div>
+    <figcaption class="photo-cap"><strong>Warren Village Covered Bridge</strong> — One of the most-photographed features of the village, spanning the Mad River just west of Main Street. Photo: Wikimedia Commons.</figcaption>
+  </figure>
+  <figure class="photo-fig short">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Second_floor_of_Warren_Public_Library%2C_August_2018.JPG/800px-Second_floor_of_Warren_Public_Library%2C_August_2018.JPG"
+      alt="Second floor of Warren Public Library, 2018"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+    />
+    <div class="photo-placeholder" style="display:none" style="height:160px">
+      📷 Warren Library interior, 2018<br><small>Wikimedia Commons</small>
+    </div>
+    <figcaption class="photo-cap"><strong>Warren Public Library, second floor, 2018</strong> — The interior of the library as it has taken shape inside the Town Hall. Vermont woodworkers built the shelving by hand for the 2009 move. Photo: Wikimedia Commons.</figcaption>
+  </figure>
+</div>
+
+
+<div class="photo-row three-up" style="margin:1.5rem 0">
+    <figure class="photo-fig">
+      <img src="images/warren_sibley_house_1967.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Sibley_House_1967.jpg/600px-Sibley_House_1967.jpg"
+        alt="Sibley House, East Warren, 1967"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Sibley House, East Warren, 1967<br><small>Wikimedia Commons</small></div>
+    </figure>
+    <figure class="photo-fig">
+      <img src="images/warren_bridge_2.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/WarrenBridge.JPG/800px-WarrenBridge.JPG"
+        alt="Warren Covered Bridge, alternate view"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Covered Bridge, alternate view<br><small>Wikimedia Commons</small></div>
+    </figure>
+    <figure class="photo-fig">
+      <img src="images/warren_hickox_house.jpg" data-wiki="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Warren_Hickox_House.JPG/800px-Warren_Hickox_House.JPG"
+        alt="Warren Hickox House (NRHP)"
+        style="height:185px"
+        loading="lazy"
+        onerror="if(this.src!==this.dataset.wiki){this.src=this.dataset.wiki}else{this.style.display='none';var p=this.closest('figure').querySelector('.photo-placeholder');if(p)p.style.display='flex'}" />
+      <div class="photo-placeholder" style="display:none;height:185px">📷 Warren Hickox House (NRHP)<br><small>Wikimedia Commons</small></div>
+    </figure>
+</div>
+<p style="font-size:.78rem;color:#888;font-style:italic;margin:-.5rem 0 1.5rem;font-family:'Libre Franklin',sans-serif;text-align:center">
+  More Warren Village: Sibley House (East Warren, photographed 1967) · Covered Bridge from upstream · Hickox House (NRHP contributing structure, Greek Revival). Photos: Wikimedia Commons.
+</p>
+</section>
+══════════════════════════════════════════ -->
+<section id="context">
+<h2 class="section-hed">Vermont Context: Libraries, Town Halls, and Who Controls What</h2>
+
+<p>Warren's question is not unique in Vermont. The state has dozens of small towns where the library and the municipal offices share space — and where the governance relationship between an independent board of library trustees and an elected select board creates structural tension.</p>
+
+<h3 class="sub-hed">Vermont Library Trustee Independence (22 V.S.A. § 143)</h3>
+<p>Vermont law grants library trustees independent authority to set library budgets, hire the library director, and govern library operations — subject only to a voter-approved appropriation. Act 150 of 2024 strengthened these provisions. This means that a library operating within a town-owned building is simultaneously under the authority of the select board (as landlord) and under the independent governance of its own trustees (as operator). In Warren, this structural ambiguity has surfaced periodically in select board discussions about rental policy, budget modifications, and staffing decisions.</p>
+
+<h3 class="sub-hed">Comparable Vermont Projects</h3>
+
+<div class="chart-panel">
+  <div class="chart-hed">Vermont Library/Municipal Facility Investments — Selected Comparisons</div>
+  <div class="chart-body"><canvas id="compareChart" height="150"></canvas></div>
+  <p class="chart-cap">Monkton (2021): $1.7M municipal bond for combined town offices + Russell Memorial Library, 5,292 sq ft, after 15 years of planning. Shelburne (2017): $6.5M bond + $500K from 426 donors; Pierson Library connected to restored 1927 Town Hall; ALA Library Design Showcase 2020 winner; borrowing surpassed 100,000 items. Moretown: Nearest Warren neighbor; library operates inside Town Hall. Warren 2009: Renovation cost approximately $200,000 for Town Hall adaptations. Vermont Municipal Bond Bank current rate environment: comparable small-town bonds have run 1.98–3.5% over 15–20 years.</p>
+</div>
+
+<h3 class="sub-hed">Moretown: The Nearest Neighbor</h3>
+<p>Moretown, Warren's immediate neighbor down the Mad River Valley, operates its Memorial Library inside the Town Hall — making it the most directly comparable arrangement to Warren's current situation. This model has operated there for years without the formal governance tension that has surfaced in Warren, in part because Moretown's circumstances differ. But it represents one endpoint of the spectrum: library fully embedded in municipal facility, permanently.</p>
+
+<h3 class="sub-hed">Warren's Architectural Heritage</h3>
+<p>Warren's architectural heritage makes a community design process uniquely possible. The town has more architects per capita than almost anywhere in the US — a legacy of the 1960s Prickly Mountain design/build movement begun by David Sellers and Yale architecture graduates, which later spawned the Yestermorrow Design/Build School in Waitsfield. Engaging this community to reimagine the Town Hall space could transform a governance dispute into a design challenge the whole town can own. It already did this once — in 2009, when Vermont woodworkers built all of the library's shelving by hand, and neighbors moved the collection book by book.</p>
+
+<div class="chart-panel">
+  <div class="chart-hed">Warren Library — Key Statistics</div>
+  <div class="chart-body"><canvas id="libraryChart" height="100"></canvas></div>
+  <p class="chart-cap">Service population: 1,713 year-round residents. Library value of services estimated at approximately 3× taxpayer funding. Warren's population is 73% seasonal/vacation, 27% year-round occupied households. Sources: Warren Town Report 2025; ACLS Public Library Survey data.</p>
+</div>
+
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECTION 6: SOURCES
+══════════════════════════════════════════ -->
+<section id="resources">
+<h2 class="section-hed">Primary Sources and Where to Learn More</h2>
+
+<p>The following sources were used in compiling this reference document. All are publicly available unless noted.</p>
+
+<div class="doc-excerpt">
+  <span class="doc-label">Town Documents — warrenvt.org</span>
+  <p><strong>2026 Town Meeting Warning:</strong> Official text filed February 11, 2026. Includes all 11 articles. Available at warrenvt.org.<br><br>
+  <strong>March 10, 2026 Select Board Packet:</strong> Includes Wiemann Lamphere Architects contract for Municipal Building space planning ($6,000), signed March 2, 2026.<br><br>
+  <strong>December 9, 2025 Select Board Minutes (draft):</strong> Discussion of Town Hall rental policy and library.<br><br>
+  <strong>2025 Warren Town Report (FINAL):</strong> Budget, library statistics, capital fund balances.</p>
+</div>
+
+<div class="doc-excerpt">
+  <span class="doc-label">Historical Sources — warrenvt.org/departments/historical-society</span>
+  <p><strong>"History of the Town of Warren, Vermont"</strong> (compiled 2017 from centralvt.com records): Covers 1780–1980s. Primary source for facilities timeline in this document.<br><br>
+  <strong>"More Warren History — Written by Mae Blair" (1966):</strong> Handwritten historical account scanned and posted by the Historical Society.<br><br>
+  <strong>Warren's Bicentennial 1789–1989 (Parts 1 & 2):</strong> Compiled for the town's bicentennial.<br><br>
+  <strong>Warren Village Historic District NRHP Nomination (1989, amended 2011):</strong> Architectural and historical analysis of Village buildings. Listed 1992.</p>
+</div>
+
+<div class="doc-excerpt">
+  <span class="doc-label">Media Coverage</span>
+  <p><strong>The Valley Reporter</strong> (valleyreporter.com): Primary Mad River Valley newspaper. Covers Warren Select Board, library, and town meeting. March 5, 2026 edition includes town meeting coverage (subscription required for full access).<br><br>
+  <strong>MRVTV — Mad River Valley Television</strong> (mrvtv.com): Full video of 2026 Warren Town Meeting available at mrvtv.com/1008801-2/. MRVTV archives all valley government meetings.<br><br>
+  <strong>VTDigger</strong> (vtdigger.org): Statewide town meeting coverage. The Warren library article was not among items covered in their 2026 statewide round-up, which focused on larger bond votes.</p>
+</div>
+
+<div class="doc-excerpt">
+  <span class="doc-label">Vermont Law</span>
+  <p><strong>22 V.S.A. § 143 (Library Trustee Authority):</strong> Governs the independent authority of public library trustees in Vermont.<br><br>
+  <strong>Act 150 of 2024:</strong> Strengthened library trustee independence provisions.<br><br>
+  <strong>Vermont Municipal Bond Bank:</strong> Available for capital project financing. Recent comparable small-town library bonds: 1.98–3.5%, 15–20 years.</p>
+</div>
+
+</section>
+
+</main><!-- /main-col -->
+
+<!-- ══════════════════════════════════════════
+     SIDEBAR
+══════════════════════════════════════════ -->
+<aside class="sidebar">
+
+  <p class="sb-hed">Key Dates</p>
+  <ul class="sb-list">
+    <li><strong>Sept. 20, 1798</strong><span>First town meeting, Warren</span></li>
+    <li><strong>1826</strong><span>Village Common and cemetery laid out</span></li>
+    <li><strong>1829</strong><span>Brick Village Schoolhouse built</span></li>
+    <li><strong>1872</strong><span>Town Hall built (413 Main St), land donated by Ed Cardell</span></li>
+    <li><strong>1900</strong><span>Warren Public Library founded by Town Meeting vote</span></li>
+    <li><strong>1947</strong><span>Volunteer Fire Dept. organized</span></li>
+    <li><strong>1952</strong><span>Village Schoolhouse remodeled; well drilled</span></li>
+    <li><strong>1974</strong><span>Library moves to Municipal Building (42 Cemetery Rd)</span></li>
+    <li><strong>1977</strong><span>Fire station addition dedicated (John Snow)</span></li>
+    <li><strong>1992</strong><span>Warren Village Historic District listed, NRHP</span></li>
+    <li><strong>2007</strong><span>$200K renovation of Town Hall approved; library site planning authorized</span></li>
+    <li><strong>2009</strong><span>Library moves to Town Hall (temporary)</span></li>
+    <li><strong>2025</strong><span>Village Green Pavilion opens</span></li>
+    <li><strong>Mar. 2, 2026</strong><span>WLA Architects contract signed for Municipal Building space study</span></li>
+    <li><strong>Mar. 3, 2026</strong><span>Town Meeting: Article 4 passes — Town Hall voted permanent library home</span></li>
+    <li><strong>Mar. 10, 2026</strong><span>Select Board post-town-meeting meeting; new officers appointed</span></li>
+  </ul>
+
+  <p class="sb-hed">Library at a Glance</p>
+  <ul class="sb-list">
+    <li><strong>Founded</strong><span>1900 (by Town Meeting vote)</span></li>
+    <li><strong>Current address</strong><span>413 Main St (Town Hall)</span></li>
+    <li><strong>Collection</strong><span>~8,526 volumes</span></li>
+    <li><strong>Annual circulations</strong><span>13,669</span></li>
+    <li><strong>Service population</strong><span>1,713</span></li>
+    <li><strong>Building Fund</strong><span>~$82,503</span></li>
+    <li><strong>Director</strong><span>Marie Schmukal</span></li>
+    <li><strong>Trustee board</strong><span>Independent per 22 V.S.A. § 143</span></li>
+  </ul>
+
+  <p class="sb-hed">Town at a Glance</p>
+  <ul class="sb-list">
+    <li><strong>Chartered</strong><span>October 20, 1789</span></li>
+    <li><strong>Named for</strong><span>Dr. Joseph Warren, first American general killed at Bunker Hill</span></li>
+    <li><strong>Population</strong><span>~1,975 (2020 Census)</span></li>
+    <li><strong>Year-round households</strong><span>~702 (27% of housing units)</span></li>
+    <li><strong>Total housing units</strong><span>~2,626</span></li>
+    <li><strong>2026 Town Budget</strong><span>$5,411,053 (+10.92%)</span></li>
+    <li><strong>Acreage</strong><span>27,390 (enlarged from Lincoln, 1824)</span></li>
+  </ul>
+
+  <p class="sb-hed">Where the Meetings Have Been Held</p>
+  <ul class="sb-list">
+    <li><strong>1798–1812</strong><span>Private homes of selectmen</span></li>
+    <li><strong>1812–c.1830</strong><span>Red School House, East Warren</span></li>
+    <li><strong>c.1830–1872</strong><span>Brick Village Schoolhouse (alternating E.Warren/Village through 1840)</span></li>
+    <li><strong>1872–c.1990s</strong><span>Town Hall, 413 Main St (floor vote held here)</span></li>
+    <li><strong>c.1990s–present</strong><span>Warren Elementary School (floor vote; more space for crowd)</span></li>
+  </ul>
+
+  <div class="sb-link-box">
+    <div class="sb-link-hed">Primary Sources Online</div>
+    <a href="https://www.warrenvt.org" target="_blank">warrenvt.org — Town Website & Documents</a>
+    <a href="https://mrvtv.com/1008801-2/" target="_blank">MRVTV: 2026 Warren Town Meeting Video</a>
+    <a href="https://www.valleyreporter.com" target="_blank">Valley Reporter — Local Coverage</a>
+    <a href="https://www.warrenvt.org/departments/historical-society/" target="_blank">Warren Historical Society Archives</a>
+    <a href="https://www.warrenlibrary.com" target="_blank">Warren Library Website</a>
+  </div>
+
+  <p class="sb-note">Official town meeting minutes for 2026 are typically posted to warrenvt.org within several weeks of the meeting. The MRVTV video recording of the full March 3 meeting is available now. The Warren Historical Society meets the 3rd Thursday of each month at the Municipal Building (42 Cemetery Rd).</p>
+
+</aside>
+</div><!-- /article-body -->
+
+<footer>
+  <p><strong>Sources:</strong> Official 2026 Town Meeting Warning (warrenvt.org, Feb. 11, 2026) · Warren Select Board Packet 03-10-2026 · Warren Historical Society, "History of the Town of Warren, Vermont" (2017) · Warren Village Historic District NRHP Nomination (1989/2011) · MRVTV Town Meeting Recording · Valley Reporter archives · Warren Town Reports 2023–2025</p>
+  <p style="margin-top:.6rem">This document is a research compilation drawing on publicly available primary sources. Article 4 passed at the March 3, 2026 Town Meeting. Official minutes will be posted at warrenvt.org. The full meeting is available on video at mrvtv.com/1008801-2/.</p>
+</footer>
+
+<script>
+// ── BUDGET CHART ─────────────────────────────
+const ctx1 = document.getElementById('budgetChart').getContext('2d');
+new Chart(ctx1, {
+  type: 'bar',
+  data: {
+    labels: ['Town Operating Budget 2026', 'Library Building Improvement Fund'],
+    datasets: [{
+      data: [5411053, 82503],
+      backgroundColor: ['#2a4428','#b07d0c'],
+      borderWidth: 0,
+      borderRadius: 2,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' $' + ctx.raw.toLocaleString()
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          callback: v => '$' + (v/1000000).toFixed(1) + 'M',
+          font: { family: "'Libre Franklin',sans-serif", size: 11 }
+        },
+        grid: { color: 'rgba(0,0,0,.06)' }
+      },
+      y: {
+        ticks: { font: { family: "'Libre Franklin',sans-serif", size: 11 } },
+        grid: { display: false }
+      }
+    }
+  }
+});
+
+// ── COMPARISON CHART ─────────────────────────────
+const ctx2 = document.getElementById('compareChart').getContext('2d');
+new Chart(ctx2, {
+  type: 'bar',
+  data: {
+    labels: ['Shelburne\nPierson Library\n(2017)', 'Monkton\nRussell Lib+\nTown Offices (2021)', 'Warren\nTown Hall\nRenovation (2009)', 'Warren\nLibrary\nBldg Fund (2026)'],
+    datasets: [{
+      data: [7000000, 1700000, 200000, 82503],
+      backgroundColor: ['#3d5a6e','#2a4428','#8b3012','#b07d0c'],
+      borderWidth: 0,
+      borderRadius: 2,
+    }]
+  },
+  options: {
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' $' + ctx.raw.toLocaleString()
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          font: { family: "'Libre Franklin',sans-serif", size: 10 },
+          maxRotation: 0
+        },
+        grid: { display: false }
+      },
+      y: {
+        ticks: {
+          callback: v => v >= 1000000 ? '$' + (v/1000000).toFixed(1) + 'M' : '$' + (v/1000).toFixed(0) + 'K',
+          font: { family: "'Libre Franklin',sans-serif", size: 10 }
+        },
+        grid: { color: 'rgba(0,0,0,.06)' }
+      }
+    }
+  }
+});
+
+// ── LIBRARY STATS CHART ─────────────────────────────
+const ctx3 = document.getElementById('libraryChart').getContext('2d');
+new Chart(ctx3, {
+  type: 'bar',
+  data: {
+    labels: ['Annual Circulations', 'Volumes in Collection', 'Service Population'],
+    datasets: [{
+      data: [13669, 8526, 1713],
+      backgroundColor: ['#2a4428', '#3d5a6e', '#8b3012'],
+      borderWidth: 0,
+      borderRadius: 2,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    plugins: {
+      legend: { display: false },
+      tooltip: {
+        callbacks: {
+          label: ctx => ' ' + ctx.raw.toLocaleString()
+        }
+      }
+    },
+    scales: {
+      x: {
+        ticks: {
+          callback: v => v.toLocaleString(),
+          font: { family: "'Libre Franklin',sans-serif", size: 11 }
+        },
+        grid: { color: 'rgba(0,0,0,.06)' }
+      },
+      y: {
+        ticks: { font: { family: "'Libre Franklin',sans-serif", size: 11 } },
+        grid: { display: false }
+      }
+    }
+  }
+});
+</script>
+
+<script>
+// If local images/ folder not found, fall back to Wikimedia URLs
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('img[data-wiki]').forEach(function(img) {
+    img.addEventListener('error', function() {
+      if (this.src !== this.dataset.wiki) {
+        this.src = this.dataset.wiki;
+      } else {
+        // Both local and wiki failed — show placeholder
+        this.style.display = 'none';
+        var ph = this.nextElementSibling;
+        if (ph && ph.classList.contains('photo-placeholder')) {
+          ph.style.display = 'flex';
+        }
+        var closest = this.closest('figure');
+        if (closest) {
+          var ph2 = closest.querySelector('.photo-placeholder');
+          if (ph2) ph2.style.display = 'flex';
+        }
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
