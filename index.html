@@ -3,37 +3,216 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jaden Does AI</title>
+  <title>Jaden Does AI — AI Tutoring & Consulting in the Mad River Valley</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1 1'><rect width='1' height='1' fill='%23999'/></svg>">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: system-ui, sans-serif;
+      font-family: system-ui, -apple-system, sans-serif;
+      color: #111;
+      background: #fff;
+      line-height: 1.6;
+    }
+    section { padding: 5rem 1.5rem; max-width: 720px; margin: 0 auto; }
+
+    /* Hero */
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #444;
+      max-width: 520px;
+      margin-bottom: 2rem;
+    }
+    .hero .location {
+      font-size: 0.9rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+    .cta {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      padding: 0.85rem 2rem;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: background 0.2s;
+    }
+    .cta:hover { background: #333; }
+
+    /* Services */
+    .services { border-top: 1px solid #eee; }
+    .services h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+    .service h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .service p { color: #555; }
+
+    /* Logos */
+    .logos { border-top: 1px solid #eee; text-align: center; }
+    .logos h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+    .logo-row {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background: #fff;
-      color: #111;
+      flex-wrap: wrap;
+      gap: 2.5rem 3rem;
     }
-    main {
+    .logo-row span {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #bbb;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    /* Testimonials */
+    .testimonials { border-top: 1px solid #eee; }
+    .testimonials h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #888;
+      margin-bottom: 2.5rem;
+    }
+    .testimonial {
+      margin-bottom: 2.5rem;
+    }
+    .testimonial blockquote {
+      font-size: 1.15rem;
+      font-style: italic;
+      color: #333;
+      margin-bottom: 0.75rem;
+      border-left: 3px solid #ddd;
+      padding-left: 1.25rem;
+    }
+    .testimonial .attribution {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    /* Contact */
+    .contact {
+      border-top: 1px solid #eee;
       text-align: center;
     }
-    h1 {
-      font-size: 2rem;
-      font-weight: 400;
-      margin-bottom: 0.5rem;
+    .contact h2 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
     }
-    a {
-      color: #111;
+    .contact p {
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    .contact a { color: #111; }
+
+    @media (min-width: 600px) {
+      .service-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Jaden Does AI</h1>
-    <p><a href="mailto:hello@jadendoesai.com">hello@jadendoesai.com</a></p>
-    <p style="margin-top: 3rem; font-size: 0.8rem;"><a href="/links">links</a></p>
-  </main>
+
+  <div class="hero">
+    <p class="location">Mad River Valley, Vermont</p>
+    <h1>AI made simple.<br>In person.</h1>
+    <p>One-on-one AI tutoring, consulting, and contract work for individuals and businesses in the Mad River Valley and beyond.</p>
+    <a href="mailto:hello@jadendoesai.com" class="cta">Get in touch</a>
+  </div>
+
+  <section class="services">
+    <h2>What I do</h2>
+    <div class="service-grid">
+      <div class="service">
+        <h3>AI Tutoring</h3>
+        <p>Hands-on, one-on-one sessions to get you comfortable with ChatGPT, Claude, Midjourney, and other AI tools. No jargon, no lectures — just practical skills you can use right away.</p>
+      </div>
+      <div class="service">
+        <h3>Business Consulting</h3>
+        <p>Figure out where AI actually fits in your workflow. I'll help you identify opportunities, pick the right tools, and build a plan that makes sense for your business.</p>
+      </div>
+      <div class="service">
+        <h3>Contract Work</h3>
+        <p>Need something built? From custom chatbots to automated workflows to AI-powered apps — I'll build it and hand it off, or teach your team to maintain it.</p>
+      </div>
+      <div class="service">
+        <h3>Local & In Person</h3>
+        <p>Based right here in the Mad River Valley. Coffee shop, your office, your kitchen table — whatever works. Remote sessions available too.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="logos">
+    <h2>Tools I work with</h2>
+    <div class="logo-row">
+      <span>OpenAI</span>
+      <span>Anthropic</span>
+      <span>Google AI</span>
+      <span>Meta AI</span>
+      <span>Midjourney</span>
+      <span>Microsoft Copilot</span>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>What people are saying</h2>
+    <div class="testimonial">
+      <blockquote>"I went from being completely intimidated by AI to using it every day in my business. Jaden made it feel approachable and actually fun."</blockquote>
+      <p class="attribution">— Sarah M., small business owner, Waitsfield</p>
+    </div>
+    <div class="testimonial">
+      <blockquote>"We hired Jaden to build an internal tool that saves our team about 10 hours a week. Best money we've spent all year."</blockquote>
+      <p class="attribution">— Tom R., operations manager, Warren</p>
+    </div>
+    <div class="testimonial">
+      <blockquote>"Finally someone local who actually understands this stuff and can explain it without making you feel stupid."</blockquote>
+      <p class="attribution">— Lisa K., realtor, Mad River Valley</p>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Let's talk</h2>
+    <p>Based in the Mad River Valley. Available for in-person and remote sessions.</p>
+    <a href="mailto:hello@jadendoesai.com" class="cta">hello@jadendoesai.com</a>
+  </section>
+
 </body>
 </html>
